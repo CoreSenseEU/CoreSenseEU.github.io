@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build and Install &mdash; CoreSenseEU 1.0.0 documentation</title>
+  <title>Build and Install &mdash; CoreSense 1.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CoreSenseEU design" href="../design/index.html" />
+    <link rel="next" title="CoreSense design" href="../design/index.html" />
     <link rel="prev" title="Getting Started" href="../getting_started/index.html" />
 
 <link rel="stylesheet" href="../_static/tcs_theme.css" type="text/css" />
@@ -32,7 +32,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: orange" >
-            <a href="../index.html" class="icon icon-home"> CoreSenseEU
+            <a href="../index.html" class="icon icon-home"> CoreSense
             <img src="../_static/coresense_logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
@@ -56,12 +56,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#install">Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build">Build</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#install-ros">Install ROS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#build-coresenseeu">Build CoreSenseEU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-coresense">Build CoreSense</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../design/index.html">CoreSenseEU design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design/index.html">CoreSense design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/dummy.html">Tutorial Dummy</a></li>
 </ul>
@@ -79,7 +79,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: orange" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">CoreSenseEU</a>
+          <a href="../index.html">CoreSense</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -106,7 +106,7 @@
 <span id="build-instructions"></span><h1>Build and Install<a class="headerlink" href="#build-and-install" title="Permalink to this headline"></a></h1>
 <div class="section" id="install">
 <h2>Install<a class="headerlink" href="#install" title="Permalink to this headline"></a></h2>
-<p>CoreSenseEU install</p>
+<p>CoreSense install</p>
 </div>
 <div class="section" id="build">
 <h2>Build<a class="headerlink" href="#build" title="Permalink to this headline"></a></h2>
@@ -114,14 +114,14 @@
 <h3>Install ROS<a class="headerlink" href="#install-ros" title="Permalink to this headline"></a></h3>
 <p>Please install ROS 2 via the usual <a class="reference external" href="https://index.ros.org/doc/ros2/Installation">build instructions</a> for your desired distribution.</p>
 </div>
-<div class="section" id="build-coresenseeu">
-<h3>Build CoreSenseEU<a class="headerlink" href="#build-coresenseeu" title="Permalink to this headline"></a></h3>
-<p>Create a new workspace, <code class="docutils literal notranslate"><span class="pre">CoreSenseEU_ws</span></code>, and clone CoreSenseEU master branch into it and build it.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/CoreSenseEU_ws/src
-<span class="nb">cd</span> ~/CoreSenseEU_ws/src
+<div class="section" id="build-coresense">
+<h3>Build CoreSense<a class="headerlink" href="#build-coresense" title="Permalink to this headline"></a></h3>
+<p>Create a new workspace, <code class="docutils literal notranslate"><span class="pre">CoreSense_ws</span></code>, and clone CoreSense master branch into it and build it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p ~/CoreSense_ws/src
+<span class="nb">cd</span> ~/CoreSense_ws/src
 git clone https://github.com/CoreSenseEU/whatever.git
 
-<span class="nb">cd</span> ~/CoreSenseEU_ws
+<span class="nb">cd</span> ~/CoreSense_ws
 rosdep install -y -r -q --from-paths src --ignore-src --rosdistro &lt;ros2-distro&gt;
 colcon build --symlink-install
 </pre></div>

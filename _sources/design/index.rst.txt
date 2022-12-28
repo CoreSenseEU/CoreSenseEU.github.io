@@ -1,6 +1,8 @@
 .. _design:
 
-CoreSenseEU design
-##################
+CoreSense design
+################
 
-CoreSenseEU general design.
+CoreSense general design.
+
+TBD

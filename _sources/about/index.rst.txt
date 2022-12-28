@@ -28,7 +28,7 @@ Our current leadership team includes (add more!!):
 Contact
 *******
 
-If you are interested in contacting someone about CoreSenseEU please email the project leader.
+If you are interested in contacting someone about CoreSense Project please email the project leader.
 We intentionally make our emails easy to find.
 If your inquiry relates to bugs or open-source feature requests, consider posting a ticket on our GitHub project.
 If your inquiry relates to configuration support or private feature development, reach out and we may be able to connect you with
