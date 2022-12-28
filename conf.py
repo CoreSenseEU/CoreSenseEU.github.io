@@ -54,7 +54,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'CoreSenseEU'
+project = u'CoreSense'
 copyright = u'2022'
 author = u'Various'
 

@@ -2,7 +2,7 @@
 https://github.com/CoreSenseEU/CoreSenseEU.github.io
 
 This folder holds the source and configuration files used to generate the
-[CoreSenseEU documentation](http://CoreSenseEU.github.io) web site.
+[CoreSense documentation](http://CoreSenseEU.github.io) web site.
 
 Dependencies for Build: 
 * [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)

@@ -7,7 +7,7 @@
 Overview
 ########
 
-ROS2 Planning System (CoreSenseEU in short) is a project... TBD
+CoreSense Project (CoreSense in short) is a project... TBD
 
 
 .. image:: images/funding.png
