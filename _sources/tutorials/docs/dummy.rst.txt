@@ -1,4 +1,4 @@
-.. _bt_actions:
+.. _dummy:
 
 Tutorial Dummy
 **************
