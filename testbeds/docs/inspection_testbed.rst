@@ -1,7 +1,7 @@
 .. _inspection_testbeds:
 
 TB2: Inspection Testbed
-**************
+***********************
 
 The objective of this testbed is to validate the CoreSense architecture with a Drone Swarm Autonomous Inspection. In this guide we present a configurable simulation environment that will be used for validate in simulation the architecture developed in this project.
 
@@ -32,7 +32,7 @@ An additional ROS2 package shall be installed for this project:
 
 
 AS2 project requirements
-=======================
+========================
 
 Additionally install the project execution dependencies, in `Aerostack2 project prerequisites <https://aerostack2.github.io/_02_examples/index.html#prerequisites>`_.
 
