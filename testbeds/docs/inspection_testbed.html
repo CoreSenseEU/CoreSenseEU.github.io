@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TB2: Inspection Testbed &mdash; CoreSense 1.0.0 documentation</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="../../_static/coresense_48x48.png"/>
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=86f27845" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/coresense_48x48.png"/>
+  
+        <script src="../../_static/jquery.js?v=8dae8fb0"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -89,6 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../demos/docs/dummydemo.html">Dummy Demo</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../toolchain/index.html">CoreSense Toolchain</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About and Contact</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/index.html#id1">About</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/index.html#contact">Contact</a></li>
@@ -127,52 +128,52 @@
            <div itemprop="articleBody">
              
   <section id="tb2-inspection-testbed">
-<span id="inspection-testbeds"></span><h1>TB2: Inspection Testbed<a class="headerlink" href="#tb2-inspection-testbed" title="Permalink to this headline"></a></h1>
+<span id="inspection-testbeds"></span><h1>TB2: Inspection Testbed<a class="headerlink" href="#tb2-inspection-testbed" title="Link to this heading"></a></h1>
 <p>The objective of this testbed is to validate the CoreSense architecture with a Drone Swarm Autonomous Inspection. In this guide we present a configurable simulation environment that will be used for validate in simulation the architecture developed in this project.</p>
 <p>In this testbed we leverage on the <a class="reference external" href="https://github.com/aerostack2/aerostack2">Aerostack2</a> framework, a ROS 2 based framework for the development of autonomous aerial systems.</p>
 <section id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h2>
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading"></a></h2>
 <section id="aerostack2-installation">
-<h3>Aerostack2 Installation<a class="headerlink" href="#aerostack2-installation" title="Permalink to this headline"></a></h3>
+<h3>Aerostack2 Installation<a class="headerlink" href="#aerostack2-installation" title="Link to this heading"></a></h3>
 <p>Follow the instructions in <a class="reference external" href="https://aerostack2.github.io/_00_getting_started/index.html">Aerostack2 Getting Started</a>.</p>
 <p>An additional ROS2 package shall be installed for this project:</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>We encourage users to use the github ssh keys for cloning the repo. More information can be found at <a class="reference external" href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-ssh-urls">github ssh docs</a></p>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ~/aerostack2_ws/src -p <span class="c1"># avoid if aerostack2 has been installed from source</span>
-<span class="nb">cd</span> ~/aerostack2_ws/src
-git clone git@github.com:CoreSenseEU/TB2_Panel_Inspection_Simulation.git
-<span class="nb">cd</span> ..
-rosdep install -y -r -q --from-paths src --ignore-src
-colcon build --symlink-install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/aerostack2_ws/src<span class="w"> </span>-p<span class="w"> </span><span class="c1"># avoid if aerostack2 has been installed from source</span>
+<span class="nb">cd</span><span class="w"> </span>~/aerostack2_ws/src
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:CoreSenseEU/TB2_Panel_Inspection_Simulation.git
+<span class="nb">cd</span><span class="w"> </span>..
+rosdep<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>-r<span class="w"> </span>-q<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src
+colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 </pre></div>
 </div>
 </section>
 <section id="as2-project-requirements">
-<h3>AS2 project requirements<a class="headerlink" href="#as2-project-requirements" title="Permalink to this headline"></a></h3>
+<h3>AS2 project requirements<a class="headerlink" href="#as2-project-requirements" title="Link to this heading"></a></h3>
 <p>Additionally install the project execution dependencies, in <a class="reference external" href="https://aerostack2.github.io/_02_examples/index.html#prerequisites">Aerostack2 project prerequisites</a>.</p>
 </section>
 <section id="inspection-testbed-project">
-<h3>Inspection Testbed project<a class="headerlink" href="#inspection-testbed-project" title="Permalink to this headline"></a></h3>
+<h3>Inspection Testbed project<a class="headerlink" href="#inspection-testbed-project" title="Link to this heading"></a></h3>
 <p>First clone the project repo with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@github.com:CoreSenseEU/TB2_Panel_Inspection_Simulation.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:CoreSenseEU/TB2_Panel_Inspection_Simulation.git
 </pre></div>
 </div>
 <p>To start using this project, please go to the root folder of the project.</p>
 </section>
 </section>
 <section id="simulation-environment">
-<h2>Simulation Environment<a class="headerlink" href="#simulation-environment" title="Permalink to this headline"></a></h2>
+<h2>Simulation Environment<a class="headerlink" href="#simulation-environment" title="Link to this heading"></a></h2>
 <figure class="align-default">
 <a class="with-shadow reference internal image-reference" href="../../_images/GazeboView2.png"><img alt="../../_images/GazeboView2.png" class="with-shadow" src="../../_images/GazeboView2.png" style="width: 960.0px; height: 540.0px;" /></a>
 </figure>
 </section>
 <section id="execution">
-<h2>Execution<a class="headerlink" href="#execution" title="Permalink to this headline"></a></h2>
+<h2>Execution<a class="headerlink" href="#execution" title="Link to this heading"></a></h2>
 <p>The execution will open a simulation in Gazebo and the Aerostack2 components will use simulation time.</p>
 <p>In order to launch the simulation for the photovoltaic inspection launch:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./launch_as2.bash -n <span class="m">4</span> -p <span class="m">5</span> -r <span class="m">4</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./launch_as2.bash<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>-p<span class="w"> </span><span class="m">5</span><span class="w"> </span>-r<span class="w"> </span><span class="m">4</span>
 </pre></div>
 </div>
 <p>The flags for the launcher are:</p>
@@ -196,7 +197,7 @@ Below an example of an image retrieved from one drone can be found.</p>
 <a class="with-shadow reference internal image-reference" href="../../_images/PanelImage.png"><img alt="../../_images/PanelImage.png" class="with-shadow" src="../../_images/PanelImage.png" style="width: 384.0px; height: 288.0px;" /></a>
 </figure>
 <p>An example mission can be launch for making the drones go to a target panel by launching:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 mission.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>mission.py
 </pre></div>
 </div>
 <p>To do a clean exit of tmux, execute:</p>
