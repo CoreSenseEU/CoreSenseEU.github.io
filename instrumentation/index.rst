@@ -176,8 +176,9 @@ Private Members
 - **type_**: Type of node (producer).
 
 
+----------------
 Demo
-=======================
+----------------
 
 .. raw:: html
 
