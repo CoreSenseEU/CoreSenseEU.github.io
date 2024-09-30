@@ -53,52 +53,14 @@ Coresense instrumentation can be defined within a launch file to facilitate seam
 - **Message Type**: The type of the ROS message (msg) that will be transmitted or received.
 - **Node Type**: Indicates whether the node will act as a producer (publisher) or a consumer (subscriber) of the data.
 
-.. code-block:: python
+.. _instrumentation_3:
+.. figure:: ../images/instrumentation_3.png
+   :align: center
+
+   Configuration file for virtual driver creation
    
-   def generate_launch_description():
 
-    names = ['scan_raw',
-             'nav_vel',
-             'image_raw']
-
-    topics = ['/scan_raw',
-              '/nav_vel',
-              '/head_front_camera/rgb/image_raw']
-
-    msgs = ['sensor_msgs::msg::LaserScan',
-            'geometry_msgs::msg::Twist',
-            'sensor_msgs::msg::Image']
-
-    node_types = ['Producer',
-                  'Consumer',
-                  'Producer']
-
-    ns = ''
-
-    composable_nodes = []
-    for topic, msg, name, node_type in zip(topics, msgs, names, node_types):
-        composable_node = ComposableNode(
-            package='coresense_instrumentation_driver',
-            plugin='coresense_instrumentation_driver::Instrumentation'
-                    + node_type + '<' + msg + '>',
-            name=name + '_node',
-            namespace=ns,
-            parameters=[{'topic': topic,
-                         'topic_type': msg,
-                         'type': node_type}],
-        )
-        composable_nodes.append(composable_node)
-
-    container = ComposableNodeContainer(
-        name='coresense_container',
-        namespace=ns,
-        package='rclcpp_components',
-        executable='component_container',
-        composable_node_descriptions=composable_nodes,
-        output='screen',
-    )
-
-In this example, the instrumentation node is set to publish data to the new topic ``/head_front_camera/rgb/image_raw'``, using data sourced from ``/image_raw``,  with the message type ``sensor_msgs::msg::Image``.
+In this example, the instrumentation node is set to publish data to the new topic ``my_new_scan``, using data sourced from ``/scan_raw``,  with the message type ``sensor_msgs/LaserScan``.
 
 
 ----------------
