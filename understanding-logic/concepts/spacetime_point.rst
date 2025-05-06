@@ -1,50 +1,53 @@
 Types
 =====
 
-.. _spacetime_point:
+
 
 **spacetime_point** ``$tType``
 ------------------------------
 
-4-dimensional coordinates (3 space, 1 time). !!! note Not to be confused
-with a 4-dimentional ```extent`` <extent.rst>`__. ###### Source:
-``fundamental-concepts.tff``
+4-dimensional coordinates (3 space, 1 time).
+
+.. note::
+   Not to be confused with a 4-dimentional `extent <extent.html>`_.
+
+Source: ``fundamental-concepts.tff``
 
 Relations
 =========
 
 .. _point_x:
 
-**point_x** ``(``\ ```spacetime_point`` <#spacetime_point>`__\ ``>``\ **``$real``**\ ``)``
+**point_x** ( `spacetime_point <#spacetime_point>`_ > **$real** )
 ------------------------------------------------------------------------------------------
 
-The spatial ``x`` coordinate of a point in space and time
-(```spacetime_point`` <#spacetime_point>`__). ###### Source:
-``fundamental-concepts.tff``
+The spatial ``x`` coordinate of a point in space and time (`spacetime_point <#spacetime_point>`_).
+
+Source: ``fundamental-concepts.tff``
 
 .. _point_y:
 
-**point_y** ``(``\ ```spacetime_point`` <#spacetime_point>`__\ ``>``\ **``$real``**\ ``)``
+**point_y** ( `spacetime_point <#spacetime_point>`_ > **$real** )
 ------------------------------------------------------------------------------------------
 
-The spatial ``y`` coordinate of a point in space and time
-(```spacetime_point`` <#spacetime_point>`__). ###### Source:
-``fundamental-concepts.tff``
+The spatial ``y`` coordinate of a point in space and time (`spacetime_point <#spacetime_point>`_).
+
+Source: ``fundamental-concepts.tff``
 
 .. _point_z:
 
-**point_z** ``(``\ ```spacetime_point`` <#spacetime_point>`__\ ``>``\ **``$real``**\ ``)``
+**point_z** ( `spacetime_point <#spacetime_point>`_ > **$real** )
 ------------------------------------------------------------------------------------------
 
-The spatial ``z`` coordinate of a point in space and time
-(```spacetime_point`` <#spacetime_point>`__). ###### Source:
-``fundamental-concepts.tff``
+The spatial ``z`` coordinate of a point in space and time (`spacetime_point <#spacetime_point>`_).
+
+Source: ``fundamental-concepts.tff``
 
 .. _point_t:
 
-**point_t** ``(``\ ```spacetime_point`` <#spacetime_point>`__\ ``>``\ **``$real``**\ ``)``
+**point_t** ( `spacetime_point <#spacetime_point>`_ > **$real** )
 ------------------------------------------------------------------------------------------
 
-The time ``t`` coordinate of a point in space and time
-(```spacetime_point`` <#spacetime_point>`__). ###### Source:
-``fundamental-concepts.tff``
+The time ``t`` coordinate of a point in space and time (`spacetime_point <#spacetime_point>`_).
+
+Source: ``fundamental-concepts.tff``

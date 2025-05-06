@@ -1,106 +1,114 @@
 Types
 =====
 
-.. _modelet:
+
 
 **modelet** ``$tType``
 ----------------------
 
-Models a `phenomenon <phenomenon.rst>`__ as the *thought* in the triangle
-of meaning. All modelets describe an instance of a
-`concept <concept.rst>`__, have an `origin <origin.rst>`__, and are
-modeled in a specific `formalism <formalism.rst>`__.
+Models a `phenomenon <phenomenon.html>`_ as the *thought* in the triangle of meaning. All modelets describe an instance of a `concept <concept.html>`_, have an `origin <origin.html>`_, and are modeled in a specific `formalism <formalism.html>`_.
 
--  `Concept <concept.rst>`__: the *phenomenon* of the
-   `modelet <#modelet>`__, an instance of a class in the world model.
--  `Origin <origin.rst>`__: the agent’s perspective on the *phenomenon*
--  `Formalism <formalism.rst>`__: the representation of the *phenomenon*
-   ###### Source: ``engines-and-modelets.tff``
+-  `Concept <concept.html>`_: the *phenomenon* of the
+   `modelet <modelet.html>`_, an instance of a class in the world model.
+-  `Origin <origin.html>`_: the agent’s perspective on the *phenomenon*
+-  `Formalism <formalism.html>`_: the representation of the *phenomenon*
 
-.. _modelet_set:
+Source: ``engines-and-modelets.tff``
+
 
 **modelet_set** ``$tType``
 --------------------------
 
-Some particular set of `modelets <#modelet>`__ which the has reasoner
-assembled. Used to collect the inputs to an `engine <engine.rst>`__. !!!
-example - {m1, m2, m3} - {m2} - {} ###### Source:
-``engines-and-modelets.tff``
+Some particular set of `modelets <modelet.html>`_ which the reasoner has assembled. Used to collect the inputs to an `engine <engine.html>`_. 
+
+.. admonition:: Example
+
+
+   - {m1, m2, m3} 
+   - {m2}
+   - {}
+
+Source: ``engines-and-modelets.tff``
 
 Relations
 =========
 
 .. _modelet_models_concept:
 
-**modelet_models_concept** ``(``\ ```modelet`` <#modelet>`__\ ``>``\ ```phenomenon`` <phenomenon.rst>`__\ ``)``
+**modelet_models_concept** ( `modelet <modelet.html>`_ > `phenomenon <phenomenon.html>`_ )
 --------------------------------------------------------------------------------------------------------------
 
-The `phenomenon <phenomenon.rst>`__ symbolizing the *phenomenon* of a
-`modelet <modelet.rst>`__. !!! question “TODO” rename from ‘concept’ to
-something else. ###### Source: ``engines-and-modelets.tff``
+The `phenomenon <phenomenon.html>`_ symbolizing the *phenomenon* of a `modelet <modelet.html>`_. 
+
+Source: ``engines-and-modelets.tff``
 
 .. _formalism_of_modelet:
 
-**formalism_of_modelet** ``(``\ ```modelet`` <#modelet>`__\ ``>``\ ```formalism`` <formalism.rst>`__\ ``)``
+**formalism_of_modelet** ( `modelet <modelet.html>`_ > `formalism <formalism.html>`_ )
 ----------------------------------------------------------------------------------------------------------
 
-The `formalism <formalism.rst>`__ used by a `modelet <#modelet>`__ to
-describe the *phenomenon*. ###### Source: ``engines-and-modelets.tff``
+The `formalism <formalism.html>`_ used by a `modelet <modelet.html>`_ to describe the *phenomenon*.
+
+Source: ``engines-and-modelets.tff``
 
 .. _modelet_creation_date:
 
-**modelet_creation_date** ``(``\ ```modelet`` <#modelet>`__\ ``>``\ **``$real``**\ ``)``
+**modelet_creation_date** ( `modelet <modelet.html>`_ > **$real** )
 ----------------------------------------------------------------------------------------
 
-The date a `modelet <#modelet>`__ was created. !!! question “TODO” The
-date is represented as a ``$real`` but we don’t make any assumptions
-about what that number represents. Unix time? time since last restart?
-seconds? This may be solved by integration with ``spacetime_point``.
-###### Source: ``engines-and-modelets.tff``
+The date a `modelet <modelet.html>`_ was created.
+
+.. admonition:: TODO
+
+   The date is represented as a ``$real`` but we don’t make any assumptions about what that number represents. Unix time? time since last restart? seconds? This may be solved by integration with ``spacetime_point``.
+
+Source: ``engines-and-modelets.tff``
 
 .. _modelet_has_location:
 
-**modelet_has_location** ``(``\ ```modelet`` <#modelet>`__\ ``>``\ ```spacetime_point`` <spacetime_point.rst>`__\ ``)``
+**modelet_has_location** ( `modelet <modelet.html>`_ > `spacetime_point <spacetime_point.html>`_ )
 ----------------------------------------------------------------------------------------------------------------------
 
-The time and spatial location a `modelet <#modelet>`__ refers to.
-`Modelets <modelet.rst>`__ may have a specific temporal scope or make an
-observation at a specific ```spacetime_point`` <spacetime_point.rst>`__.
-###### Source: ``engines-and-modelets.tff``
+The time and spatial location a `modelet <modelet.html>`_ refers to. `Modelets <modelet.html>`_ may have a specific temporal scope or make an observation at a specific `spacetime_point <spacetime_point.html>`_.
+
+Source: ``engines-and-modelets.tff``
 
 .. _modelet_has_extent:
 
-**modelet_has_extent** ``(``\ ```modelet`` <#modelet>`__\ ``>``\ ```extent`` <extent.rst>`__\ ``)``
+**modelet_has_extent** ( `modelet <modelet.html>`_ > `extent <extent.html>`_ )
 --------------------------------------------------------------------------------------------------
 
-The time and spatial `extent <extent.rst>`__ a `modelet <#modelet>`__
-refers to. `Modelets <#modelet>`__ may have an area/volume/duration of
-reference. ###### Source: ``engines-and-modelets.tff``
+The time and spatial `extent <extent.html>`_ a `modelet <modelet.html>`_ refers to. `Modelets <modelet.html>`_ may have an area/volume/duration of reference.
+
+Source: ``engines-and-modelets.tff``
 
 .. _modelet_has_representation_class:
 
-**modelet_has_representation_class** ``(``\ ```modelet`` <#modelet>`__\ ``>``\ ```representation_class`` <representation_class.rst>`__\ ``)``
+**modelet_has_representation_class** ( `modelet <modelet.html>`_ > `representation_class <representation_class.html>`_ )
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-The `representation_class <representation_class.rst>`__ a
-`modelet <#modelet>`__\ ’s relation to its parents has after being
-created by an `engine <engine.rst>`__. !!! question “TODO” This looks
-like it will turn out to be HOL. ###### Source:
-``engines-and-modelets.tff``
+The `representation_class <representation_class.html>`_ a `modelet <modelet.html>`_’s relation to its parents has after being created by an `engine <engine.html>`_. 
+
+.. hint::
+   
+   This looks like it will turn out to be HOL.
+
+Source: ``engines-and-modelets.tff``
 
 .. _modelet_has_creator:
 
-**modelet_has_creator** ``(``\ ```modelet`` <#modelet>`__\ ``>``\ ```engine`` <engine.rst>`__\ ``)``
+**modelet_has_creator** ( `modelet <modelet.html>`_ > `engine <engine.html>`_ )
 ---------------------------------------------------------------------------------------------------
 
-The `engine <engine.rst>`__ that created the `modelet <#modelet>`__.
-###### Source: ``engines-and-modelets.tff``
+The `engine <engine.html>`_ that created the `modelet <modelet.html>`_.
+
+Source: ``engines-and-modelets.tff``
 
 .. _is_in_modelet_set:
 
-**is_in_modelet_set** ``((``\ ```modelet`` <#modelet>`__\ ``*``\ ```modelet_set`` <#modelet_set>`__\ ``) >``\ **``$o``**\ ``)``
+**is_in_modelet_set** (( `modelet <modelet.html>`_ * `modelet_set <modelet.html_set>`_ ) > **$o** )
 -------------------------------------------------------------------------------------------------------------------------------
 
-Check if a `modelet <#modelet>`__ is a member of a
-`modelet_set <#modelet_set>`__. ###### Source:
-``engines-and-modelets.tff``
+Check if a `modelet <modelet.html>`_ is a member of a `modelet_set <modelet.html_set>`_.
+
+Source: ``engines-and-modelets.tff``

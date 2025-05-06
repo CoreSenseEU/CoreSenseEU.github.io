@@ -6,11 +6,14 @@ Types
 **concept** ``$tType``
 ----------------------
 
-An instance of a class of `phenomenon <phenomenon.rst>`__ in the agent’s
-world model.
+An instance of a class of `phenomenon <phenomenon.html>`_ in the agent’s world model.
 
-A `concept <#concept>`__ is a `property <property.rst>`__ of a
-`modelet <modelet.rst>`__.
+A `concept <#concept>`_ is a `property <property.html>`_ of a `modelet <modelet.html>`_.
 
-!!! example - chair - dog - the color pink - sunrise ###### Source:
-``fundamental-concepts.tff``
+.. example::
+   - chair 
+   - dog
+   - the color pink
+   - sunrise
+
+Source: ``fundamental-concepts.tff``

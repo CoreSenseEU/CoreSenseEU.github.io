@@ -1,106 +1,165 @@
 Concepts
 ========
 
-!!! danger These concepts are still in development and high susceptible
-to change. Use the provided terms, definitions, and types with caution.
+.. danger::
+
+   These concepts are still in development and highly susceptible to change. Use the provided terms, definitions, and types with caution.
 
 The **Understanding System** (a.k.a Understanding Core) is a CoreSense
 module for generating understanding within a *CoreSense* agent. The main
-idea is to: !!! quote “Intuition” Find *strategies* of **Engine**
+idea is to: .. quote:: Intuition Find *strategies* of **Engine**
 *exertions* to **create** required **Modelets**.
 
-!!! question “TODO” Add a map of the concepts or something more elegant
-here… We should also include the triangle of meaning.
+.. admonition:: TODO
+
+   Add a map of the concepts or something more elegant here… We should also include the triangle of meaning.
 
 Types
 -----
 
-`agent <agent.rst>`__
-~~~~~~~~~~~~~~~~~~~~
+`agent <agent.html>`_
+~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/agent.rst:3:3”
+.. include:: agent.rst
+   :start-line: 8
+   :end-line: 9
 
-`datatype <datatype.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+`datatype <datatype.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/datatype.rst:3:3”
+.. include:: datatype.rst
+   :start-line: 8
+   :end-line: 9
 
-`engine <engine.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~
+`engine <engine.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/engine.rst:3:3”
+.. include:: engine.rst
+   :start-line: 8
+   :end-line: 9
 
-`exertion <exertion.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+`exertion <exertion.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/exertion.rst:3:3”
+.. include:: exertion.rst
+   :start-line: 67
+   :end-line: 68
 
-`extent <extent.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~
+`extent <extent.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/extent.rst:3:3”
+.. include:: extent.rst
+   :start-line: 8
+   :end-line: 9
 
-`formalism <formalism.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`formalism <formalism.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/formalism.rst:3:3”
+.. include:: formalism.rst
+   :start-line: 8
+   :end-line: 9
 
-`modelet <modelet.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~
+`modelet <modelet.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/modelet.rst:3:3”
+.. include:: modelet.rst
+   :start-line: 8
+   :end-line: 9
 
-`modelet_set <modelet.rst#modelet_set>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`modelet_set <modelet.html#modelet_set>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/modelet.rst:13:13”
+.. include:: modelet.rst
+   :start-line: 21
+   :end-line: 22
 
-`origin <origin.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~
+`origin <origin.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/origin.rst:3:3”
+.. include:: origin.rst
+   :start-line: 8
+   :end-line: 9
 
-`phenomenon <phenomenon.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`phenomenon <phenomenon.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/phenomenon.rst:3:4”
+.. include:: phenomenon.rst
+   :start-line: 8
+   :end-line: 9
 
-`property <property.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+`property <property.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/property.rst:3:3”
+.. include:: property.rst
+   :start-line: 8
+   :end-line: 9
 
-`requirement <requirement.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`requirement <requirement.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/requirement.rst:3:3”
+.. include:: requirement.rst
+   :start-line: 8
+   :end-line: 9
 
-`representation_class <representation_class.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`representation_class <representation_class.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/representation_class.rst:3:3”
+.. include:: representation_class.rst
+   :start-line: 8
+   :end-line: 9
 
-`spacetime_point <spacetime_point.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`spacetime_point <spacetime_point.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/spacetime_point.rst:3:3”
+.. include:: spacetime_point.rst
+   :start-line: 8
+   :end-line: 9
 
-`strategy <strategy.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+`strategy <strategy.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/strategy.rst:3:3”
+.. include:: strategy.rst
+   :start-line: 8
+   :end-line: 9
 
-`template <template.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+`template <template.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/template.rst:3:4”
+.. include:: template.rst
+   :start-line: 8
+   :end-line: 9
 
-`template_set <template.rst#template_set>`__
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`template_set <template.html#template_set>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/template.rst:11:11”
+.. include:: template.rst
+   :start-line: 19
+   :end-line: 20
 
-`concept <concept.rst>`__
-~~~~~~~~~~~~~~~~~~~~~~~~
+`concept <concept.html>`_
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-–8<– “docs/concepts/concept.rst:3:3”
+.. include:: concept.rst
+   :start-line: 8
+   :end-line: 9
+
+
+.. toctree::
+   :hidden:
+
+   agent.rst
+   concept.rst
+   datatype.rst
+   engine.rst
+   exertion.rst
+   extent.rst
+   formalism.rst
+   modelet.rst
+   origin.rst
+   phenomenon.rst
+   property.rst
+   representation_class.rst
+   requirement.rst
+   spacetime_point.rst
+   strategy.rst
+   template.rst

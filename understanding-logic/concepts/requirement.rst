@@ -1,36 +1,41 @@
 Types
 =====
 
-.. _requirement:
+
 
 **requirement** ``$tType``
 --------------------------
 
-A restriction on the `property <property.rst>`__ values that a
-`template <template.rst>`__ may enforce on a `modelet <modelet.rst>`__.
-###### Source: ``properties.tff``
+A restriction on the `property <property.html>`_ values that a `template <template.html>`_ may enforce on a `modelet <modelet.html>`_.
+
+Source: ``properties.tff``
 
 Relations
 =========
 
 .. _datatype_of_p:
 
-**datatype_of_requirement** ``(``\ ```requirement`` <#requirement>`__\ ``>``\ ```datatype`` <datatype.rst>`__\ ``)``
--------------------------------------------------------------------------------------------------------------------
+**datatype_of_requirement** ( `requirement <#requirement>`_ > `datatype <datatype.html>`_ )
+--------------------------------------------------------------------------------------------------------------------
 
-The `datatype <datatype.rst>`__ of a certain
-`requirement <#requirement>`__. ###### Source: ``properties.tff``
+The `datatype <datatype.html>`_ of a certain `requirement <#requirement>`_.
+
+Source: ``properties.tff``
 
 .. _is_permissible:
 
-**is_permissible** ``((``\ ```requirement`` <#requirement>`__\ ``*``\ **``$real``**\ ``) >``\ **``$o``**\ ``)``
+**is_permissible** (( `requirement <#requirement>`_ * **$real** ) > **$o** )
 ---------------------------------------------------------------------------------------------------------------
 
-Check if a value is *permissible* under a certain
-`requirement <#requirement>`__. ###### Source: ``properties.tff``
+Check if a value is *permissible* under a certain `requirement <#requirement>`_.
 
-**is_part_of** ``((``\ ```requirement`` <#requirement>`__\ ``*``\ ```template`` <template.rst>`__\ ``) >``\ **``$o``**\ ``)`` { $is_part_of data-toc-label=‘is_part_of’ }
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Source: ``properties.tff``
 
-Check if a `requirement <#requirement>`__ is part of a
-`template <template.rst>`__. ###### Source: ``properties.tff``
+.. _is_part_of:
+
+**is_part_of** (( `requirement <#requirement>`_ * `template <template.html>`_ ) > **$o** )
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Check if a `requirement <#requirement>`_ is part of a `template <template.html>`_.
+
+Source: ``properties.tff``

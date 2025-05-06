@@ -1,49 +1,55 @@
 Types
 =====
 
-.. _property:
+
 
 **property** ``$tType``
 -----------------------
 
-A specific characteristic of a `modelet <modelet.rst>`__ or
-`engine <engine.rst>`__. Multiple things can exhibit the same
-`property <#property>`__.
+A specific characteristic of a `modelet <modelet.html>`_ or `engine <engine.html>`_. Multiple things can exhibit the same `property <property.html>`_.
 
-!!! example - color: red - age: 14 years ###### Source:
-``properties.tff``
+.. admonition:: example
+
+   - color: red 
+   - age: 14 years
+
+Source: ``properties.tff``
 
 Relations
 =========
 
 .. _has_value:
 
-**has_value** ``(``\ ```property`` <#property>`__\ ``>``\ **``$real``**\ ``)``
+**has_value** ( `property <#property>`_ > **$real** )
 ------------------------------------------------------------------------------
 
-The value of a certain `property <#property>`__. ###### Source:
-``properties.tff``
+The value of a certain `property <#property>`_.
+
+Source: ``properties.tff``
 
 .. _datatype_of_p:
 
-**datatype_of_property** ``(``\ ```property`` <#property>`__\ ``>``\ ```datatype`` <datatype.rst>`__\ ``)``
-----------------------------------------------------------------------------------------------------------
+**datatype_of_property** ( `property <#property>`_ > `datatype <datatype.html>`_ )
+-----------------------------------------------------------------------------------------------------------
 
-The `datatype <datatype.rst>`__ of a certain `property <#property>`__.
-###### Source: ``properties.tff``
+The `datatype <datatype.html>`_ of a certain `property <#property>`_.
+
+Source: ``properties.tff``
 
 .. _is_property_of_m:
 
-**is_property_of_modelet** ``((``\ ```property`` <#property>`__\ ``*``\ ```modelet`` <modelet.rst>`__\ ``) >``\ **``$o``**\ ``)``
---------------------------------------------------------------------------------------------------------------------------------
+**is_property_of_modelet** (( `property <#property>`_ * `modelet <modelet.html>`_ ) > **$o** )
+---------------------------------------------------------------------------------------------------------------------------------
 
-Check if a `modelet <modelet.rst>`__ is described by a certain
-`property <#property>`__. ###### Source: ``properties.tff``
+Check if a `modelet <modelet.html>`_ is described by a certain `property <#property>`_.
+
+Source: ``properties.tff``
 
 .. _is_property_of_e:
 
-**is_property_of_engine** ``((``\ ```property`` <#property>`__\ ``*``\ ```engine`` <engine.rst>`__\ ``) >``\ **``$o``**\ ``)``
------------------------------------------------------------------------------------------------------------------------------
+**is_property_of_engine** (( `property <#property>`_ * `engine <engine.html>`_ ) > **$o** )
+------------------------------------------------------------------------------------------------------------------------------
 
-Check if an `engine <engine.rst>`__ is described by a certain
-`property <#property>`__. ###### Source: ``properties.tff``
+Check if an `engine <engine.html>`_ is described by a certain `property <#property>`_.
+
+Source: ``properties.tff``

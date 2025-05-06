@@ -6,6 +6,6 @@ Types
 **representation_class** ``$tType``
 -----------------------------------
 
-The purpose of a `modelet <modelet.rst>`__ (extrinsic to itself) when
-used by an `engine <engine.rst>`__. Class in the *Processing/Modelling
-Model*. ###### Source: ``fundamental-concepts.tff``
+The relation a `modelet <modelet.html>`_ has with its parents, i.e. the inputs to the `engine <engine.html>`_ `exertion <exertion.html>`_. Class of their relation in the *Processing/Modelling Model*.
+
+Source: ``fundamental-concepts.tff``
