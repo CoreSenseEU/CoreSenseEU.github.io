@@ -30,7 +30,7 @@ sys.path.insert(0, os.path.abspath('.'))
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['breathe', 'sphinx.ext.graphviz', 'sphinxcontrib.plantuml', 'sphinx.ext.extlinks']
+extensions = ['breathe', 'sphinx.ext.graphviz', 'sphinxcontrib.plantuml', 'sphinx.ext.extlinks', 'sphinx.ext.autosummary', 'sphinx.ext.autodoc']
 
 graphviz_output_format='png'
 graphviz_dot_args=[
@@ -75,12 +75,12 @@ version = release = "1.0.0"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = "en"
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build','_themes','scripts' ]
+exclude_patterns = ['_build','_themes','scripts', 'venv' ]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
