@@ -26,3 +26,7 @@ CoreSense Project (CoreSense in short) is a project... TBD
    demos/index.rst
    toolchain/index.rst
    about/index.rst
+   instrumentation/index.rst
+
+   
+   
