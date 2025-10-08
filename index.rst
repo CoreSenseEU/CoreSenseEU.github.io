@@ -18,6 +18,7 @@ CoreSense Project (CoreSense in short) is a project... TBD
    :hidden:
 
    getting_started/index.rst
+   opensourecommunity/index.rst
    build_instructions/index.rst
    design/index.rst
    tutorials/index.rst
