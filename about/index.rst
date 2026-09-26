@@ -6,30 +6,31 @@ About and Contact
 About
 *****
 
-CoreSense Project(CoreSense in short) is a project whose objective is to provide blah blah
+CoreSense (*A Hybrid Cognitive Architecture for Deep Understanding*) is a four-year research project (October 2022 – September 2026) funded by the European Union's Horizon Europe programme under grant agreement No 101070254. It develops a theory of understanding and awareness for robots and a cognitive architecture that implements it, and it releases the resulting software to the ROS community.
 
-We strive to create an open community and encourage new ROS users and experts alike to collaborate.
-However, that can't happen without your issues, pull requests, and support.
-We would like to thank here our current and past contributors and maintainers.
+The CoreSense consortium:
 
-Our current leadership team includes (add more!!):
+- Universidad Politécnica de Madrid (UPM), Spain, coordinator
+- Technische Universiteit Delft (TUD), the Netherlands
+- Fraunhofer IPA (FhG), Germany
+- Universidad Rey Juan Carlos (URJC), Spain
+- PAL Robotics (PAL), Spain
+- Irish Manufacturing Research (IMR), Ireland
+- Czech Technical University in Prague (CVUT), Czech Republic
 
-+------------------+------------------------------------+-------------+----------------+
-| Name             | Organization                       | GitHub ID   | Current Role   |
-+==================+====================================+=============+================+
-| Ricardo Sanz     | Universidad Politécnica de Madrid  | ricardo_    | Project Leader |
-+------------------+------------------------------------+-------------+----------------+
-| Francisco Martín | Rey Juan Carlos University         | fmrico_     | WP5 Leader     |
-+------------------+------------------------------------+-------------+----------------+
-
-.. _fmrico: https://github.com/fmrico
-.. _ricardo: https://github.com/ricardo
+The project website, with news, publications and the public deliverables, is https://coresense.eu.
 
 Contact
 *******
 
-If you are interested in contacting someone about CoreSense Project please email the project leader.
-We intentionally make our emails easy to find.
-If your inquiry relates to bugs or open-source feature requests, consider posting a ticket on our GitHub project.
-If your inquiry relates to configuration support or private feature development, reach out and we may be able to connect you with
-independent consultants or contractors that know this project well.
+- Questions about a package, bug reports and feature requests: open an issue in the corresponding repository of the `CoreSense GitHub organisation <https://github.com/CoreSenseEU>`_.
+- Questions about the project: see the contact information at https://coresense.eu.
+
+Funding
+*******
+
+.. image:: ../images/eu_funded_en.jpg
+  :width: 300
+  :alt: Funded by the European Union
+
+CoreSense has received funding from the European Union's Horizon Europe research and innovation programme under grant agreement No 101070254. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission. Neither the European Union nor the granting authority can be held responsible for them.
