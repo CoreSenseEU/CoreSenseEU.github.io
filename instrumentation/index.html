@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoreSense Instrumentation &mdash; CoreSense 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+
+  
+    <link rel="shortcut icon" href="../_static/coresense_48x48.png"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CoreSense Toolchain" href="../toolchain/index.html" />
+    <link rel="prev" title="Publish a package in the CoreSense Pixi channels" href="../tutorials/docs/pixi_release.html" />
+
+<link rel="stylesheet" href="../_static/tcs_theme.css" type="text/css" />
+
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: orange" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CoreSense
+              <img src="../_static/coresense_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#available-channels">Available channels</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../build_instructions/index.html">Build and Install</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#install-with-pixi">Install with Pixi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#install-with-apt">Install with apt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#build-from-source">Build from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../design/index.html">CoreSense design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design/index.html#architecture-subsystems">Architecture subsystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design/index.html#cognitive-modules">Cognitive modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design/index.html#understanding-system">Understanding system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design/index.html#engineering-toolchain">Engineering toolchain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/index.html">Software catalogue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#cognitive-modules-and-structures">Cognitive modules and structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#toolchain">Toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#ros-2-instrumentation">ROS 2 instrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#testbeds">Testbeds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html">Cognitive modules with cs4home_architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html#run-the-yolo-module">Run the YOLO module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html#run-the-face-module">Run the face module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html#create-your-own-module">Create your own module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/riskam.html">Risk awareness with RiskAM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#run">Run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#output">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/pixi_release.html">Publish a package in the CoreSense Pixi channels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#install-pixi">1. Install Pixi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#add-a-package-manifest">2. Add a package manifest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#add-the-workspace-manifest">3. Add the workspace manifest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#build-and-test-locally">4. Build and test locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#publish-to-a-local-folder-first">5. Publish to a local folder first</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#publish-to-the-coresense-channel">6. Publish to the CoreSense channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#install-the-published-package">7. Install the published package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CoreSense Instrumentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use">How to use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deployment">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#implementation">Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#instrumentationconsumer">InstrumentationConsumer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#member-functions">Member Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#services">Services</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#private-members">Private Members</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#instrumentationproducer">InstrumentationProducer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Member Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Services</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Private Members</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#demo">Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../toolchain/index.html">CoreSense Toolchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testbeds/index.html">Testbeds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../testbeds/docs/manufacturing_testbed.html">TB1: Manufacturing Testbed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html">TB2: Inspection Testbed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#setup">Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#aerostack2-installation">Aerostack2 Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#as2-project-requirements">AS2 project requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#inspection-testbed-project">Inspection Testbed project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#simulation-environment">Simulation Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#execution">Execution</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../testbeds/docs/social_testbed.html">TB3: Social Testbed</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/index.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opensourecommunity/index.html">Contribution guideline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opensourecommunity/index.html#releasing-a-package">Releasing a package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About and Contact</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/index.html#id1">About</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/index.html#contact">Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/index.html#funding">Funding</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: orange" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CoreSense</a>
+      </nav>
+
+      <div class="wy-nav-content">
+
+<span style="float: right;" >
+    <a class="github-button" href="https://github.com/CoreSenseEU/CoreSenseEU.github.io" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Edit IntelligentRoboticsLabs/CoreSenseEU.github.io on GitHub" ">Edit</a>
+</span>
+
+
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CoreSense Instrumentation</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="coresense-instrumentation">
+<span id="instrumentation"></span><h1>CoreSense Instrumentation<a class="headerlink" href="#coresense-instrumentation" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This package is part of the CoreSense project. Feedback is welcome in the <a class="reference external" href="https://github.com/CoreSenseEU/coresense_instrumentation/issues">issue tracker</a>.</p>
+</div>
+<p>Monitoring robot behavior in real-world applications often requires tracking multiple nodes, each with its own topics. To simplify this, we developed CoreSense Instrumentation. It allows you to monitor the state of the robot’s systems and manage nodes and topics, including creating or deleting them as needed.</p>
+<figure class="align-center" id="id4">
+<span id="instrumentation-1"></span><a class="with-shadow reference internal image-reference" href="../_images/instrumentation_1.png"><img alt="Logo" class="with-shadow" height="61" src="../_images/instrumentation_1.png" width="608" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 1 </span><span class="caption-text">Virtual driver creation</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The tool works by creating a virtual driver for each component, as shown in <a class="reference internal" href="#instrumentation-1"><span class="std std-numref">Figure 1</span></a>. Each driver uses a lifecycle topic, letting you configure, activate, and deactivate components easily. You can also set up new data flows, enabling inspection and diagnostics of your robot’s status. For easy visualization, we provide an Rviz plugin, seen in <a class="reference internal" href="#instrumentation-2"><span class="std std-numref">Figure 2</span></a>.</p>
+<figure class="align-center" id="id5">
+<span id="instrumentation-2"></span><a class="reference internal image-reference" href="../_images/instrumentation_panel.png"><img alt="../_images/instrumentation_panel.png" height="661" src="../_images/instrumentation_panel.png" width="355" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">CoreSense Instrumentation RViz plugin</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="how-to-use">
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Link to this heading"></a></h2>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h3>
+<p>To install CoreSense Instrumentation, follow these steps:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/instrumentation/src<span class="w"> </span>-p
+<span class="nb">cd</span><span class="w"> </span>~/instrumentation/src
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/CoreSenseEU/coresense_instrumentation.git
+<span class="nb">cd</span><span class="w"> </span>..
+rosdep<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>-r<span class="w"> </span>-q<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src
+colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
+</pre></div>
+</div>
+</section>
+<section id="deployment">
+<h3>Deployment<a class="headerlink" href="#deployment" title="Link to this heading"></a></h3>
+<p>Coresense instrumentation can be defined within a launch file to facilitate seamless interaction between various nodes. When configuring a virtual driver, the following parameters can be specified:</p>
+<ul class="simple">
+<li><p><strong>Name (optional)</strong>: The name of the new topic to be created by the virtual driver.</p></li>
+<li><p><strong>Source Topics</strong>: The names of the topics from which data will be taken.</p></li>
+<li><p><strong>Message Type</strong>: The type of the ROS message (msg) that will be transmitted or received.</p></li>
+<li><p><strong>Node Type</strong>: Indicates whether the node will act as a producer (publisher) or a consumer (subscriber) of the data.</p></li>
+</ul>
+<figure class="align-center" id="id6">
+<span id="instrumentation-3"></span><img alt="../_images/instrumentation_3.png" src="../_images/instrumentation_3.png" />
+<figcaption>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">Configuration file for virtual driver creation</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>In this example, the instrumentation node is set to publish data to the new topic <code class="docutils literal notranslate"><span class="pre">my_new_scan</span></code>, using data sourced from <code class="docutils literal notranslate"><span class="pre">/scan_raw</span></code>,  with the message type <code class="docutils literal notranslate"><span class="pre">sensor_msgs/LaserScan</span></code>.</p>
+</section>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading"></a></h2>
+<section id="instrumentationconsumer">
+<h3>InstrumentationConsumer<a class="headerlink" href="#instrumentationconsumer" title="Link to this heading"></a></h3>
+<section id="member-functions">
+<h4>Member Functions<a class="headerlink" href="#member-functions" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>get_topic</strong>: Returns the name of the current topic.</p></li>
+<li><p><strong>get_topic_type</strong>: Returns the type of the topic.</p></li>
+<li><p><strong>on_configure</strong>: Configures the node during the transition to the active state.</p></li>
+<li><p><strong>on_activate</strong>: Activates the node and makes it start its publishing/subscribing.</p></li>
+<li><p><strong>on_deactivate</strong>: Deactivates the node and stops it from interacting with topics.</p></li>
+<li><p><strong>on_cleanup</strong>: Cleans up the node resources.</p></li>
+<li><p><strong>on_shutdown</strong>: Handles shutdown-related procedures.</p></li>
+</ul>
+</section>
+<section id="services">
+<h4>Services<a class="headerlink" href="#services" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>handleCreateSubscriberRequest</strong>: Handles the creation of new subscribers.</p></li>
+<li><p><strong>handleDeleteSubscriberRequest</strong>: Handles the deletion of existing subscribers.</p></li>
+</ul>
+</section>
+<section id="private-members">
+<h4>Private Members<a class="headerlink" href="#private-members" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>pub_</strong>: Publisher for the topic.</p></li>
+<li><p><strong>status_pub_</strong>: Publisher for the node status information.</p></li>
+<li><p><strong>status_timer_</strong>: Timer used to publish the node status periodically.</p></li>
+<li><p><strong>create_subscriber_service_</strong>: Service to handle the creation of subscribers.</p></li>
+<li><p><strong>delete_subscriber_service_</strong>: Service to handle the deletion of subscribers.</p></li>
+<li><p><strong>subscriptions_</strong>: A map that stores active subscriptions based on topic names.</p></li>
+<li><p><strong>topic_</strong>: The name of the topic.</p></li>
+<li><p><strong>topic_type_</strong>: The type of the topic message.</p></li>
+<li><p><strong>type_</strong>: Specifies whether the node is a producer or consumer.</p></li>
+</ul>
+</section>
+</section>
+<section id="instrumentationproducer">
+<h3>InstrumentationProducer<a class="headerlink" href="#instrumentationproducer" title="Link to this heading"></a></h3>
+<section id="id1">
+<h4>Member Functions<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>get_topic</strong>: Returns the topic name.</p></li>
+<li><p><strong>get_topic_type</strong>: Returns the type of the topic message.</p></li>
+<li><p><strong>on_configure</strong>: Called when the node enters the configure state.</p></li>
+<li><p><strong>on_activate</strong>: Called when the node becomes active.</p></li>
+<li><p><strong>on_deactivate</strong>: Called when the node is deactivated.</p></li>
+<li><p><strong>on_cleanup</strong>: Called when cleaning up node resources.</p></li>
+<li><p><strong>on_shutdown</strong>: Called when the node is shutting down.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h4>Services<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>handleCreatePublisherRequest</strong>: Handles requests to create new publishers.</p></li>
+<li><p><strong>handleDeletePublisherRequest</strong>: Handles requests to delete existing publishers.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h4>Private Members<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>sub_</strong>: Subscription to the topic.</p></li>
+<li><p><strong>status_pub_</strong>: Publishes node status.</p></li>
+<li><p><strong>status_timer_</strong>: Timer used to publish node status periodically.</p></li>
+<li><p><strong>create_publisher_service_</strong>: Service for handling publisher creation.</p></li>
+<li><p><strong>delete_publisher_service_</strong>: Service for handling publisher deletion.</p></li>
+<li><p><strong>publishers_</strong>: Map of topic names to their respective publishers.</p></li>
+<li><p><strong>topic_</strong>: Topic name.</p></li>
+<li><p><strong>topic_type_</strong>: Message type for the topic.</p></li>
+<li><p><strong>type_</strong>: Type of node (producer).</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="demo">
+<h2>Demo<a class="headerlink" href="#demo" title="Link to this heading"></a></h2>
+<video width="640" height="360" controls>
+    <source src="https://github.com/Juancams/coresense_instrumentation/assets/44479765/e6cada5c-5071-4a41-b226-5dc5c18a37aa" type="video/mp4">
+    Your browser does not support the video tag.
+</video></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022-2026, CoreSense Consortium.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+<script type="text/javascript" src="../_static/tcs_theme.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+</body>
+</html>

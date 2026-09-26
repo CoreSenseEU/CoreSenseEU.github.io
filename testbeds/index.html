@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -5,23 +7,22 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testbeds &mdash; CoreSense 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=86f27845" />
-      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
 
   
     <link rel="shortcut icon" href="../_static/coresense_48x48.png"/>
-  
-        <script src="../_static/jquery.js?v=8dae8fb0"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=8d563738"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=8d563738"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="TB2: Inspection Testbed" href="docs/inspection_testbed.html" />
-    <link rel="prev" title="Tutorial Dummy" href="../tutorials/docs/dummy.html" />
+    <link rel="next" title="TB1: Manufacturing Testbed" href="docs/manufacturing_testbed.html" />
+    <link rel="prev" title="CoreSense Toolchain" href="../toolchain/index.html" />
 
 <link rel="stylesheet" href="../_static/tcs_theme.css" type="text/css" />
 
@@ -40,9 +41,6 @@
             CoreSense
               <img src="../_static/coresense_logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                latest
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -53,25 +51,84 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#running-the-example">Running the Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/index.html#available-channels">Available channels</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../build_instructions/index.html">Build and Install</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#install">Install</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#build">Build</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../build_instructions/index.html#install-ros">Install ROS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../build_instructions/index.html#build-coresense">Build CoreSense</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#install-with-pixi">Install with Pixi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#install-with-apt">Install with apt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../build_instructions/index.html#build-from-source">Build from source</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../design/index.html">CoreSense design</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design/index.html#architecture-subsystems">Architecture subsystems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design/index.html#cognitive-modules">Cognitive modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design/index.html#understanding-system">Understanding system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design/index.html#engineering-toolchain">Engineering toolchain</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../design/index.html">CoreSense design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../packages/index.html">Software catalogue</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#architecture">Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#cognitive-modules-and-structures">Cognitive modules and structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#toolchain">Toolchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#ros-2-instrumentation">ROS 2 instrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../packages/index.html#testbeds">Testbeds</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/dummy.html">Tutorial Dummy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html">Cognitive modules with cs4home_architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html#run-the-yolo-module">Run the YOLO module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html#run-the-face-module">Run the face module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/cs4home_modules.html#create-your-own-module">Create your own module</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/riskam.html">Risk awareness with RiskAM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#run">Run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#output">Output</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/pixi_release.html">Publish a package in the CoreSense Pixi channels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#install-pixi">1. Install Pixi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#add-a-package-manifest">2. Add a package manifest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#add-the-workspace-manifest">3. Add the workspace manifest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#build-and-test-locally">4. Build and test locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#publish-to-a-local-folder-first">5. Publish to a local folder first</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#publish-to-the-coresense-channel">6. Publish to the CoreSense channel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#install-the-published-package">7. Install the published package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../instrumentation/index.html">CoreSense Instrumentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../instrumentation/index.html#how-to-use">How to use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../instrumentation/index.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../instrumentation/index.html#deployment">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../instrumentation/index.html#implementation">Implementation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../instrumentation/index.html#instrumentationconsumer">InstrumentationConsumer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../instrumentation/index.html#member-functions">Member Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../instrumentation/index.html#services">Services</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../instrumentation/index.html#private-members">Private Members</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../instrumentation/index.html#instrumentationproducer">InstrumentationProducer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../instrumentation/index.html#id1">Member Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../instrumentation/index.html#id2">Services</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../instrumentation/index.html#id3">Private Members</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../instrumentation/index.html#demo">Demo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../toolchain/index.html">CoreSense Toolchain</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Testbeds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/manufacturing_testbed.html">TB1: Manufacturing Testbed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docs/inspection_testbed.html">TB2: Inspection Testbed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="docs/inspection_testbed.html#setup">Setup</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="docs/inspection_testbed.html#aerostack2-installation">Aerostack2 Installation</a></li>
@@ -83,16 +140,16 @@
 <li class="toctree-l3"><a class="reference internal" href="docs/inspection_testbed.html#execution">Execution</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="docs/social_testbed.html">TB3: Social Testbed</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../demos/index.html">Demos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../demos/docs/dummydemo.html">Dummy Demo</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../toolchain/index.html">CoreSense Toolchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos/index.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opensourecommunity/index.html">Contribution guideline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../opensourecommunity/index.html#releasing-a-package">Releasing a package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../about/index.html">About and Contact</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/index.html#id1">About</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/index.html#contact">Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/index.html#funding">Funding</a></li>
 </ul>
 </li>
 </ul>
@@ -128,10 +185,12 @@
              
   <section id="testbeds">
 <span id="id1"></span><h1>Testbeds<a class="headerlink" href="#testbeds" title="Link to this heading"></a></h1>
-<p>CoreSense Testbeds</p>
+<p>CoreSense has been validated in three testbeds, each one focused on different properties of the robot: flexibility, resilience and explainability. The public deliverables of each testbed are available at <a class="reference external" href="https://coresense.eu">https://coresense.eu</a>.</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="docs/manufacturing_testbed.html">TB1: Manufacturing Testbed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/inspection_testbed.html">TB2: Inspection Testbed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/social_testbed.html">TB3: Social Testbed</a></li>
 </ul>
 </div>
 </section>
@@ -144,7 +203,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022.</p>
+    <p>&#169; Copyright 2022-2026, CoreSense Consortium.</p>
   </div>
 
    
