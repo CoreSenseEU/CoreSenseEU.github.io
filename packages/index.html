@@ -186,6 +186,7 @@
   <section id="software-catalogue">
 <span id="packages"></span><h1>Software catalogue<a class="headerlink" href="#software-catalogue" title="Link to this heading"></a></h1>
 <p>All the CoreSense software is open source and hosted in the <a class="reference external" href="https://github.com/CoreSenseEU">CoreSense GitHub organisation</a>. This page lists the main repositories, grouped by topic. The <em>Install</em> column shows how each one can be installed (see <a class="reference internal" href="../build_instructions/index.html#build-instructions"><span class="std std-ref">Build and Install</span></a>): <strong>Pixi</strong>, <strong>apt</strong> or <strong>source</strong>.</p>
+<p>At the end of the project, on 30 September 2026, 22 packages of 12 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the <em>Install</em> column names them.</p>
 <section id="architecture">
 <h2>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
@@ -203,7 +204,7 @@
 <tbody>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/cs4home_architecture">cs4home_architecture</a></p></td>
 <td><p>ROS 2 implementation of the CoreSense architecture: cognitive modules (afferent, core, efferent, meta and coupling components) and flows.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">cs4home_core</span></code>), source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/cs4home_examples">cs4home_examples</a></p></td>
 <td><p>Example cognitive modules built with <code class="docutils literal notranslate"><span class="pre">cs4home_architecture</span></code>.</p></td>
@@ -227,7 +228,15 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/decision_system">decision_system</a></p></td>
 <td><p>CoreSense decision system for ROS 2.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi (all but <code class="docutils literal notranslate"><span class="pre">krr_btcpp_ros2</span></code>), source</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense_common">coresense_common</a></p></td>
+<td><p>Common messages, bringup and behaviour-tree controller of the understanding system.</p></td>
+<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">coresense_msgs</span></code>), source</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense_engine_examples">coresense_engine_examples</a></p></td>
+<td><p>Examples of CoreSense engine nodes.</p></td>
+<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">coresense_example_msgs</span></code>), source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/triplestar_kb">triplestar_kb</a></p></td>
 <td><p>Knowledge base for ROS 2 based on RDF-star and RDF 1.2.</p></td>
@@ -235,7 +244,7 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense_vampire">coresense_vampire</a></p></td>
 <td><p>ROS 2 node that wraps the Vampire automated theorem prover.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/cso">cso</a></p></td>
 <td><p>CoreSense Ontology, resolvable at <a class="reference external" href="https://w3id.org/coresense/cso">https://w3id.org/coresense/cso</a>.</p></td>
@@ -269,7 +278,7 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/physics-aware-module">physics-aware-module</a></p></td>
 <td><p>Physics-aware modelling module based on neuro-evolutionary symbolic regression.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/fms">fms</a></p></td>
 <td><p>Cognitive structure to deploy AI foundation models inside CoreSense systems.</p></td>
@@ -281,11 +290,11 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/cs4home_sound_module">cs4home_sound_module</a></p></td>
 <td><p>Cognitive module for sound perception.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">sound_msgs</span></code>), source</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/cs4home_vision_module">cs4home_vision_module</a></p></td>
 <td><p>Cognitive module for visual perception.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">cs4home_msgs</span></code>), source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/cs4home_person_tracker_module">cs4home_person_tracker_module</a></p></td>
 <td><p>Person tracking from camera and laser detections.</p></td>
@@ -293,7 +302,7 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/cs4home-explainability">cs4home-explainability</a></p></td>
 <td><p>Explainability framework based on behaviour-tree status and component evidence.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">explainability_msgs</span></code> and two explainers), source</p></td>
 </tr>
 </tbody>
 </table>
@@ -315,7 +324,7 @@
 <tbody>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/rossdl">rossdl</a></p></td>
 <td><p>ROS System Definition Language: model-based description of ROS 2 systems and code generation.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">rossdl_cmake</span></code>), source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/ipa320/RosTooling">RosTooling</a></p></td>
 <td><p>Eclipse-based IDE to model ROS systems. See <a class="reference internal" href="../toolchain/index.html#toolchain-introduction"><span class="std std-ref">CoreSense Toolchain</span></a>.</p></td>
@@ -349,7 +358,7 @@
 <tbody>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense_instrumentation">coresense_instrumentation</a></p></td>
 <td><p>Virtual drivers to activate, deactivate and monitor data flows, and an RViz plugin. See <a class="reference internal" href="../instrumentation/index.html#instrumentation"><span class="std std-ref">CoreSense Instrumentation</span></a>.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 </tbody>
 </table>
@@ -383,7 +392,7 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/collective_awareness_structure">collective_awareness_structure</a></p></td>
 <td><p>Collective awareness for multi-robot systems built with Aerostack2 (inspection testbed).</p></td>
-<td><p>source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/TB2_Panel_Inspection_Simulation">TB2_Panel_Inspection_Simulation</a></p></td>
 <td><p>Simulation of the drone panel inspection testbed.</p></td>
