@@ -55,7 +55,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'CoreSense'
-copyright = u'2022'
+copyright = u'2022-2026, CoreSense Consortium'
 author = u'Various'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -75,12 +75,12 @@ version = release = "1.0.0"
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build','_themes','scripts' ]
+exclude_patterns = ['_build','_themes','scripts','extra']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -192,3 +192,6 @@ breathe_default_members = ('members', 'undoc-members', 'content-only')
 
 extlinks = {'projectfile':
     ('https://github.com/CoreSenseEU/%s', 'filepath ')}
+
+# Extra files copied as-is to the output, e.g. redirects for old URLs.
+html_extra_path = ['extra']

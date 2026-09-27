@@ -4,7 +4,7 @@
 CoreSense Instrumentation
 *************************
 
-.. attention:: This package is part of the CORESENSE prject. And is still under development. any feedback is welcome.
+.. note:: This package is part of the CoreSense project. Feedback is welcome in the `issue tracker <https://github.com/CoreSenseEU/coresense_instrumentation/issues>`_.
 
 Monitoring robot behavior in real-world applications often requires tracking multiple nodes, each with its own topics. To simplify this, we developed CoreSense Instrumentation. It allows you to monitor the state of the robot’s systems and manage nodes and topics, including creating or deleting them as needed.
 
@@ -24,7 +24,7 @@ The tool works by creating a virtual driver for each component, as shown in :num
    :scale: 100
    :align: center
 
-   Coresense Instrumentation Rviz plugin
+   CoreSense Instrumentation RViz plugin
 
 ----------------
 How to use

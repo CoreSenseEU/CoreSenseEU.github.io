@@ -12,4 +12,14 @@ To streamline the review process, the pull request should have a concise yet inf
 
 Once the pull request is submitted, maintainers of the main repository will review it. This review process typically involves evaluating the code against coding standards, verifying functionality, and assessing overall impact. The repository maintainers will then decide to approve, request revisions, or reject the pull request based on these criteria. Upon approval, the pull request will be merged, thereby incorporating the changes into the upstream repository.
 
-When implementing changes, adherence to the `CoreSense Developer’s Guidelines <https://coresense.eu/wp-content/uploads/2023/11/CORESENSE_D5.1-CoreSense-ROS-Development-Guidelines.pdf>`_ is mandatory. Any code not aligning with these guidelines will be deemed non-compliant and will not be merged. Specifically, for contributions involving ROS code, compliance with ROS testing policies is required. This includes meeting the minimum requirement of unit test coverage, ensuring that all components are thoroughly tested to prevent regression and ensure robustness. Additionally, the code must pass all defined linter checks, which validate code quality, formatting, and adherence to stylistic conventions.
+When implementing changes, adherence to the `CoreSense Developer’s Guidelines <https://www.coresense.eu/doc/CS-019.pdf>`_ is mandatory. Any code not aligning with these guidelines will be deemed non-compliant and will not be merged. Specifically, for contributions involving ROS code, compliance with ROS testing policies is required. This includes meeting the minimum requirement of unit test coverage, ensuring that all components are thoroughly tested to prevent regression and ensure robustness. Additionally, the code must pass all defined linter checks, which validate code quality, formatting, and adherence to stylistic conventions.
+
+Releasing a package
+*******************
+
+Packages are released as CoreSense packages when they reach the quality required by the development guidelines and are useful for the ROS community. The package leader requests the release, the committee of package leaders reviews it, and the package leader publishes it for the newest active ROS 2 distributions:
+
+- In the ROS 2 buildfarm, with ``bloom``, following the `ROS 2 release guide <https://docs.ros.org/en/rolling/How-To-Guides/Releasing/Releasing-a-Package.html>`_.
+- In the CoreSense Pixi channels at prefix.dev, following :ref:`tutorial_pixi_release`.
+
+Every repository must include a ``LICENSE`` file (Apache 2.0 is recommended) and the EU funding acknowledgement in its ``README.md``.

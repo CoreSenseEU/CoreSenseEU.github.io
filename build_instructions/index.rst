@@ -3,32 +3,48 @@
 Build and Install
 #################
 
-Install
-*******
+CoreSense software can be installed in three ways. Use binary packages when they exist, and build from source for the rest.
 
-CoreSense install
+==========================  ==============================  ======================================
+Method                      Requires                        Available for
+==========================  ==============================  ======================================
+Pixi (conda packages)       Pixi, any Linux distribution    Packages in the CoreSense channels
+``apt`` (Debian packages)   Ubuntu with ROS 2 installed     Packages in the ROS 2 buildfarm
+From source                 ROS 2 and ``colcon``            All the repositories
+==========================  ==============================  ======================================
 
+The :ref:`packages` page shows which method is available for each package.
 
-Build
-*****
+Install with Pixi
+*****************
 
-Install ROS
------------
+See :ref:`getting_started`. The CoreSense channels are:
 
-Please install ROS 2 via the usual `build instructions <https://index.ros.org/doc/ros2/Installation>`_ for your desired distribution.
+- Jazzy: https://prefix.dev/channels/coresense-jazzy
+- Kilted: https://prefix.dev/channels/coresense-kilted
 
-Build CoreSense
----------------
+Install with apt
+****************
 
-Create a new workspace, ``CoreSense_ws``, and clone CoreSense master branch into it and build it. 
+Install ROS 2 following the `official instructions <https://docs.ros.org/en/jazzy/Installation.html>`_, then install the released packages. For example, for EasyNav on Jazzy:
 
-.. code:: bash
+.. code-block:: bash
 
-  mkdir -p ~/CoreSense_ws/src
-  cd ~/CoreSense_ws/src
-  git clone https://github.com/CoreSenseEU/whatever.git
-  
-  cd ~/CoreSense_ws
-  rosdep install -y -r -q --from-paths src --ignore-src --rosdistro <ros2-distro>
-  colcon build --symlink-install
+   sudo apt install ros-jazzy-easynav ros-jazzy-easynav-simple-planner
 
+Build from source
+*****************
+
+Install ROS 2 following the `official instructions <https://docs.ros.org/en/jazzy/Installation.html>`_. Then create a workspace, clone the repository, install its dependencies and build it. For example, for the CoreSense architecture used in the social testbed:
+
+.. code-block:: bash
+
+   mkdir -p ~/coresense_ws/src
+   cd ~/coresense_ws/src
+   git clone https://github.com/CoreSenseEU/cs4home_architecture.git
+   cd ~/coresense_ws
+   rosdep install --from-paths src --ignore-src -r -y
+   colcon build --symlink-install
+   source install/setup.bash
+
+Replace the repository with the one you need. Each repository README describes its specific dependencies and branches.
