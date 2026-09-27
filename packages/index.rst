@@ -5,6 +5,8 @@ Software catalogue
 
 All the CoreSense software is open source and hosted in the `CoreSense GitHub organisation <https://github.com/CoreSenseEU>`_. This page lists the main repositories, grouped by topic. The *Install* column shows how each one can be installed (see :ref:`build-instructions`): **Pixi**, **apt** or **source**.
 
+At the end of the project, on 30 September 2026, 22 packages of 12 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the *Install* column names them.
+
 Architecture
 ************
 
@@ -17,7 +19,7 @@ Architecture
      - Install
    * - `cs4home_architecture <https://github.com/CoreSenseEU/cs4home_architecture>`_
      - ROS 2 implementation of the CoreSense architecture: cognitive modules (afferent, core, efferent, meta and coupling components) and flows.
-     - source
+     - Pixi (``cs4home_core``), source
    * - `cs4home_examples <https://github.com/CoreSenseEU/cs4home_examples>`_
      - Example cognitive modules built with ``cs4home_architecture``.
      - source
@@ -35,13 +37,19 @@ Architecture
      - source
    * - `decision_system <https://github.com/CoreSenseEU/decision_system>`_
      - CoreSense decision system for ROS 2.
-     - source
+     - Pixi (all but ``krr_btcpp_ros2``), source
+   * - `coresense_common <https://github.com/CoreSenseEU/coresense_common>`_
+     - Common messages, bringup and behaviour-tree controller of the understanding system.
+     - Pixi (``coresense_msgs``), source
+   * - `coresense_engine_examples <https://github.com/CoreSenseEU/coresense_engine_examples>`_
+     - Examples of CoreSense engine nodes.
+     - Pixi (``coresense_example_msgs``), source
    * - `triplestar_kb <https://github.com/CoreSenseEU/triplestar_kb>`_
      - Knowledge base for ROS 2 based on RDF-star and RDF 1.2.
      - source
    * - `coresense_vampire <https://github.com/CoreSenseEU/coresense_vampire>`_
      - ROS 2 node that wraps the Vampire automated theorem prover.
-     - source
+     - Pixi, source
    * - `cso <https://github.com/CoreSenseEU/cso>`_
      - CoreSense Ontology, resolvable at https://w3id.org/coresense/cso.
      - --
@@ -64,7 +72,7 @@ Cognitive modules and structures
      - source
    * - `physics-aware-module <https://github.com/CoreSenseEU/physics-aware-module>`_
      - Physics-aware modelling module based on neuro-evolutionary symbolic regression.
-     - source
+     - Pixi, source
    * - `fms <https://github.com/CoreSenseEU/fms>`_
      - Cognitive structure to deploy AI foundation models inside CoreSense systems.
      - source
@@ -73,16 +81,16 @@ Cognitive modules and structures
      - source
    * - `cs4home_sound_module <https://github.com/CoreSenseEU/cs4home_sound_module>`_
      - Cognitive module for sound perception.
-     - source
+     - Pixi (``sound_msgs``), source
    * - `cs4home_vision_module <https://github.com/CoreSenseEU/cs4home_vision_module>`_
      - Cognitive module for visual perception.
-     - source
+     - Pixi (``cs4home_msgs``), source
    * - `cs4home_person_tracker_module <https://github.com/CoreSenseEU/cs4home_person_tracker_module>`_
      - Person tracking from camera and laser detections.
      - source
    * - `cs4home-explainability <https://github.com/CoreSenseEU/cs4home-explainability>`_
      - Explainability framework based on behaviour-tree status and component evidence.
-     - source
+     - Pixi (``explainability_msgs`` and two explainers), source
 
 Toolchain
 *********
@@ -96,7 +104,7 @@ Toolchain
      - Install
    * - `rossdl <https://github.com/CoreSenseEU/rossdl>`_
      - ROS System Definition Language: model-based description of ROS 2 systems and code generation.
-     - source
+     - Pixi (``rossdl_cmake``), source
    * - `RosTooling <https://github.com/ipa320/RosTooling>`_
      - Eclipse-based IDE to model ROS systems. See :ref:`toolchain_introduction`.
      - update site
@@ -119,7 +127,7 @@ ROS 2 instrumentation
      - Install
    * - `coresense_instrumentation <https://github.com/CoreSenseEU/coresense_instrumentation>`_
      - Virtual drivers to activate, deactivate and monitor data flows, and an RViz plugin. See :ref:`instrumentation`.
-     - source
+     - Pixi, source
 
 Testbeds
 ********
@@ -142,7 +150,7 @@ Testbeds
      - source, apt
    * - `collective_awareness_structure <https://github.com/CoreSenseEU/collective_awareness_structure>`_
      - Collective awareness for multi-robot systems built with Aerostack2 (inspection testbed).
-     - source
+     - Pixi, source
    * - `TB2_Panel_Inspection_Simulation <https://github.com/CoreSenseEU/TB2_Panel_Inspection_Simulation>`_
      - Simulation of the drone panel inspection testbed.
      - source
