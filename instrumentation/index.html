@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,15 +9,15 @@
   <title>CoreSense Instrumentation &mdash; CoreSense 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
 
   
     <link rel="shortcut icon" href="../_static/coresense_48x48.png"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8d563738"></script>
-      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=af2ce170"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -85,7 +85,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/riskam.html">Risk awareness with RiskAM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#install-with-pixi">Install with Pixi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build-from-source">Build from source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#run">Run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#output">Output</a></li>
 </ul>
@@ -184,31 +185,29 @@
            <div itemprop="articleBody">
              
   <section id="coresense-instrumentation">
-<span id="instrumentation"></span><h1>CoreSense Instrumentation<a class="headerlink" href="#coresense-instrumentation" title="Link to this heading"></a></h1>
+<span id="instrumentation"></span><h1>CoreSense Instrumentation<a class="headerlink" href="#coresense-instrumentation" title="Permalink to this heading"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This package is part of the CoreSense project. Feedback is welcome in the <a class="reference external" href="https://github.com/CoreSenseEU/coresense_instrumentation/issues">issue tracker</a>.</p>
 </div>
 <p>Monitoring robot behavior in real-world applications often requires tracking multiple nodes, each with its own topics. To simplify this, we developed CoreSense Instrumentation. It allows you to monitor the state of the robot’s systems and manage nodes and topics, including creating or deleting them as needed.</p>
 <figure class="align-center" id="id4">
-<span id="instrumentation-1"></span><a class="with-shadow reference internal image-reference" href="../_images/instrumentation_1.png"><img alt="Logo" class="with-shadow" height="61" src="../_images/instrumentation_1.png" width="608" />
-</a>
+<span id="instrumentation-1"></span><a class="with-shadow reference internal image-reference" href="../_images/instrumentation_1.png"><img alt="Logo" class="with-shadow" src="../_images/instrumentation_1.png" style="width: 608.0px; height: 61.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 1 </span><span class="caption-text">Virtual driver creation</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 1 </span><span class="caption-text">Virtual driver creation</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The tool works by creating a virtual driver for each component, as shown in <a class="reference internal" href="#instrumentation-1"><span class="std std-numref">Figure 1</span></a>. Each driver uses a lifecycle topic, letting you configure, activate, and deactivate components easily. You can also set up new data flows, enabling inspection and diagnostics of your robot’s status. For easy visualization, we provide an Rviz plugin, seen in <a class="reference internal" href="#instrumentation-2"><span class="std std-numref">Figure 2</span></a>.</p>
 <figure class="align-center" id="id5">
-<span id="instrumentation-2"></span><a class="reference internal image-reference" href="../_images/instrumentation_panel.png"><img alt="../_images/instrumentation_panel.png" height="661" src="../_images/instrumentation_panel.png" width="355" />
-</a>
+<span id="instrumentation-2"></span><a class="reference internal image-reference" href="../_images/instrumentation_panel.png"><img alt="../_images/instrumentation_panel.png" src="../_images/instrumentation_panel.png" style="width: 355.0px; height: 661.0px;" /></a>
 <figcaption>
-<p><span class="caption-number">Figure 2 </span><span class="caption-text">CoreSense Instrumentation RViz plugin</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 2 </span><span class="caption-text">CoreSense Instrumentation RViz plugin</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <section id="how-to-use">
-<h2>How to use<a class="headerlink" href="#how-to-use" title="Link to this heading"></a></h2>
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this heading"></a></h2>
 <section id="installation">
-<h3>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h3>
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h3>
 <p>To install CoreSense Instrumentation, follow these steps:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/instrumentation/src<span class="w"> </span>-p
 <span class="nb">cd</span><span class="w"> </span>~/instrumentation/src
@@ -220,7 +219,7 @@ colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 </div>
 </section>
 <section id="deployment">
-<h3>Deployment<a class="headerlink" href="#deployment" title="Link to this heading"></a></h3>
+<h3>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h3>
 <p>Coresense instrumentation can be defined within a launch file to facilitate seamless interaction between various nodes. When configuring a virtual driver, the following parameters can be specified:</p>
 <ul class="simple">
 <li><p><strong>Name (optional)</strong>: The name of the new topic to be created by the virtual driver.</p></li>
@@ -231,18 +230,18 @@ colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 <figure class="align-center" id="id6">
 <span id="instrumentation-3"></span><img alt="../_images/instrumentation_3.png" src="../_images/instrumentation_3.png" />
 <figcaption>
-<p><span class="caption-number">Figure 3 </span><span class="caption-text">Configuration file for virtual driver creation</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+<p><span class="caption-number">Figure 3 </span><span class="caption-text">Configuration file for virtual driver creation</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>In this example, the instrumentation node is set to publish data to the new topic <code class="docutils literal notranslate"><span class="pre">my_new_scan</span></code>, using data sourced from <code class="docutils literal notranslate"><span class="pre">/scan_raw</span></code>,  with the message type <code class="docutils literal notranslate"><span class="pre">sensor_msgs/LaserScan</span></code>.</p>
 </section>
 </section>
 <section id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading"></a></h2>
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this heading"></a></h2>
 <section id="instrumentationconsumer">
-<h3>InstrumentationConsumer<a class="headerlink" href="#instrumentationconsumer" title="Link to this heading"></a></h3>
+<h3>InstrumentationConsumer<a class="headerlink" href="#instrumentationconsumer" title="Permalink to this heading"></a></h3>
 <section id="member-functions">
-<h4>Member Functions<a class="headerlink" href="#member-functions" title="Link to this heading"></a></h4>
+<h4>Member Functions<a class="headerlink" href="#member-functions" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>get_topic</strong>: Returns the name of the current topic.</p></li>
 <li><p><strong>get_topic_type</strong>: Returns the type of the topic.</p></li>
@@ -254,14 +253,14 @@ colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 </ul>
 </section>
 <section id="services">
-<h4>Services<a class="headerlink" href="#services" title="Link to this heading"></a></h4>
+<h4>Services<a class="headerlink" href="#services" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>handleCreateSubscriberRequest</strong>: Handles the creation of new subscribers.</p></li>
 <li><p><strong>handleDeleteSubscriberRequest</strong>: Handles the deletion of existing subscribers.</p></li>
 </ul>
 </section>
 <section id="private-members">
-<h4>Private Members<a class="headerlink" href="#private-members" title="Link to this heading"></a></h4>
+<h4>Private Members<a class="headerlink" href="#private-members" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>pub_</strong>: Publisher for the topic.</p></li>
 <li><p><strong>status_pub_</strong>: Publisher for the node status information.</p></li>
@@ -276,9 +275,9 @@ colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 </section>
 </section>
 <section id="instrumentationproducer">
-<h3>InstrumentationProducer<a class="headerlink" href="#instrumentationproducer" title="Link to this heading"></a></h3>
+<h3>InstrumentationProducer<a class="headerlink" href="#instrumentationproducer" title="Permalink to this heading"></a></h3>
 <section id="id1">
-<h4>Member Functions<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<h4>Member Functions<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>get_topic</strong>: Returns the topic name.</p></li>
 <li><p><strong>get_topic_type</strong>: Returns the type of the topic message.</p></li>
@@ -290,14 +289,14 @@ colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 </ul>
 </section>
 <section id="id2">
-<h4>Services<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<h4>Services<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>handleCreatePublisherRequest</strong>: Handles requests to create new publishers.</p></li>
 <li><p><strong>handleDeletePublisherRequest</strong>: Handles requests to delete existing publishers.</p></li>
 </ul>
 </section>
 <section id="id3">
-<h4>Private Members<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<h4>Private Members<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p><strong>sub_</strong>: Subscription to the topic.</p></li>
 <li><p><strong>status_pub_</strong>: Publishes node status.</p></li>
@@ -313,7 +312,7 @@ colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
 </section>
 </section>
 <section id="demo">
-<h2>Demo<a class="headerlink" href="#demo" title="Link to this heading"></a></h2>
+<h2>Demo<a class="headerlink" href="#demo" title="Permalink to this heading"></a></h2>
 <video width="640" height="360" controls>
     <source src="https://github.com/Juancams/coresense_instrumentation/assets/44479765/e6cada5c-5071-4a41-b226-5dc5c18a37aa" type="video/mp4">
     Your browser does not support the video tag.

@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../">
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,15 +9,15 @@
   <title>Publish a package in the CoreSense Pixi channels &mdash; CoreSense 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
 
   
     <link rel="shortcut icon" href="../../_static/coresense_48x48.png"/>
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=8d563738"></script>
-      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=af2ce170"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -85,7 +85,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="riskam.html">Risk awareness with RiskAM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="riskam.html#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="riskam.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="riskam.html#install-with-pixi">Install with Pixi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="riskam.html#build-from-source">Build from source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="riskam.html#run">Run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="riskam.html#output">Output</a></li>
 </ul>
@@ -185,17 +186,17 @@
            <div itemprop="articleBody">
              
   <section id="publish-a-package-in-the-coresense-pixi-channels">
-<span id="tutorial-pixi-release"></span><h1>Publish a package in the CoreSense Pixi channels<a class="headerlink" href="#publish-a-package-in-the-coresense-pixi-channels" title="Link to this heading"></a></h1>
+<span id="tutorial-pixi-release"></span><h1>Publish a package in the CoreSense Pixi channels<a class="headerlink" href="#publish-a-package-in-the-coresense-pixi-channels" title="Permalink to this heading"></a></h1>
 <p>This tutorial publishes a ROS 2 package in the CoreSense Pixi channels, so that anyone can install it with Pixi on any Linux distribution. It summarises the second exercise of the ROSCon 2026 workshop <a class="reference external" href="https://prefix-dev.github.io/roscon-2026-declarative-ros-workspaces-with-pixi/">Declarative ROS workspaces with Pixi</a>, and it is also part of the <a class="reference external" href="https://www.coresense.eu/doc/CS-019.pdf">CoreSense/ROS Development Guidelines (D5.1)</a>.</p>
 <p>The examples use a package called <code class="docutils literal notranslate"><span class="pre">my_package</span></code> and ROS 2 Jazzy. For Kilted, replace <code class="docutils literal notranslate"><span class="pre">jazzy</span></code> with <code class="docutils literal notranslate"><span class="pre">kilted</span></code> everywhere.</p>
 <section id="install-pixi">
-<h2>1. Install Pixi<a class="headerlink" href="#install-pixi" title="Link to this heading"></a></h2>
+<h2>1. Install Pixi<a class="headerlink" href="#install-pixi" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://pixi.sh/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </pre></div>
 </div>
 </section>
 <section id="add-a-package-manifest">
-<h2>2. Add a package manifest<a class="headerlink" href="#add-a-package-manifest" title="Link to this heading"></a></h2>
+<h2>2. Add a package manifest<a class="headerlink" href="#add-a-package-manifest" title="Permalink to this heading"></a></h2>
 <p>Put a <code class="docutils literal notranslate"><span class="pre">pixi.toml</span></code> next to the <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> of each package, and another one at the root of the repository for the workspace:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>my_repository/
   pixi.toml               &lt;- workspace manifest
@@ -217,7 +218,7 @@
 <p>For <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> to find an executable, install it in <code class="docutils literal notranslate"><span class="pre">lib/&lt;package_name&gt;</span></code>, as in any ROS 2 package.</p>
 </section>
 <section id="add-the-workspace-manifest">
-<h2>3. Add the workspace manifest<a class="headerlink" href="#add-the-workspace-manifest" title="Link to this heading"></a></h2>
+<h2>3. Add the workspace manifest<a class="headerlink" href="#add-the-workspace-manifest" title="Permalink to this heading"></a></h2>
 <div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[workspace]</span>
 <span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"my_repository"</span>
 <span class="n">channels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://prefix.dev/coresense-jazzy"</span><span class="p">,</span>
@@ -240,7 +241,7 @@
 <p>The conda name of <code class="docutils literal notranslate"><span class="pre">my_package</span></code> is <code class="docutils literal notranslate"><span class="pre">ros-jazzy-my-package</span></code>: distribution prefix, and hyphens instead of underscores.</p>
 </section>
 <section id="build-and-test-locally">
-<h2>4. Build and test locally<a class="headerlink" href="#build-and-test-locally" title="Link to this heading"></a></h2>
+<h2>4. Build and test locally<a class="headerlink" href="#build-and-test-locally" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pixi<span class="w"> </span>install<span class="w">        </span><span class="c1"># builds my_package and installs it in the environment</span>
 pixi<span class="w"> </span>run<span class="w"> </span>start<span class="w">      </span><span class="c1"># runs the node, no sourcing needed</span>
 </pre></div>
@@ -248,14 +249,14 @@ pixi<span class="w"> </span>run<span class="w"> </span>start<span class="w">    
 <p>If the build fails, the usual reason is a dependency in <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> with a different name in RoboStack. It can be mapped with the <code class="docutils literal notranslate"><span class="pre">extra-package-mappings</span></code> option of <a class="reference external" href="https://pixi.sh/latest/build/backends/pixi-build-ros/">pixi-build-ros</a>.</p>
 </section>
 <section id="publish-to-a-local-folder-first">
-<h2>5. Publish to a local folder first<a class="headerlink" href="#publish-to-a-local-folder-first" title="Link to this heading"></a></h2>
+<h2>5. Publish to a local folder first<a class="headerlink" href="#publish-to-a-local-folder-first" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pixi<span class="w"> </span>publish<span class="w"> </span>--target-channel<span class="w"> </span>./output
 find<span class="w"> </span>output<span class="w"> </span>-name<span class="w"> </span><span class="s2">"*.conda"</span>
 </pre></div>
 </div>
 </section>
 <section id="publish-to-the-coresense-channel">
-<h2>6. Publish to the CoreSense channel<a class="headerlink" href="#publish-to-the-coresense-channel" title="Link to this heading"></a></h2>
+<h2>6. Publish to the CoreSense channel<a class="headerlink" href="#publish-to-the-coresense-channel" title="Permalink to this heading"></a></h2>
 <p>You need a prefix.dev account with write permission on the CoreSense channels. Ask the WP5 leader to add your account, create an API key in your prefix.dev account settings, and then run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pixi<span class="w"> </span>auth<span class="w"> </span>login<span class="w"> </span>prefix.dev<span class="w"> </span>--token<span class="w"> </span>&lt;YOUR_API_KEY&gt;
 pixi<span class="w"> </span>publish<span class="w"> </span>--dry-run<span class="w"> </span>--target-channel<span class="w"> </span>https://prefix.dev/coresense-jazzy
@@ -265,7 +266,7 @@ pixi<span class="w"> </span>publish<span class="w"> </span>--target-channel<span
 <p>A version that already exists in the channel is skipped, so increase the version in <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> for every release. Packages are built for the platform of the machine where Pixi runs.</p>
 </section>
 <section id="install-the-published-package">
-<h2>7. Install the published package<a class="headerlink" href="#install-the-published-package" title="Link to this heading"></a></h2>
+<h2>7. Install the published package<a class="headerlink" href="#install-the-published-package" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pixi<span class="w"> </span>init<span class="w"> </span>my_app<span class="w"> </span>-c<span class="w"> </span>https://prefix.dev/coresense-jazzy<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-c<span class="w"> </span>https://prefix.dev/robostack-jazzy<span class="w"> </span>-c<span class="w"> </span>conda-forge
 <span class="nb">cd</span><span class="w"> </span>my_app

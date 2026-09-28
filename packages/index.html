@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,15 +9,15 @@
   <title>Software catalogue &mdash; CoreSense 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
 
   
     <link rel="shortcut icon" href="../_static/coresense_48x48.png"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8d563738"></script>
-      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=af2ce170"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -85,7 +85,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/riskam.html">Risk awareness with RiskAM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#install-with-pixi">Install with Pixi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build-from-source">Build from source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#run">Run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#output">Output</a></li>
 </ul>
@@ -184,11 +185,11 @@
            <div itemprop="articleBody">
              
   <section id="software-catalogue">
-<span id="packages"></span><h1>Software catalogue<a class="headerlink" href="#software-catalogue" title="Link to this heading"></a></h1>
+<span id="packages"></span><h1>Software catalogue<a class="headerlink" href="#software-catalogue" title="Permalink to this heading"></a></h1>
 <p>All the CoreSense software is open source and hosted in the <a class="reference external" href="https://github.com/CoreSenseEU">CoreSense GitHub organisation</a>. This page lists the main repositories, grouped by topic. The <em>Install</em> column shows how each one can be installed (see <a class="reference internal" href="../build_instructions/index.html#build-instructions"><span class="std std-ref">Build and Install</span></a>): <strong>Pixi</strong>, <strong>apt</strong> or <strong>source</strong>.</p>
-<p>At the end of the project, on 30 September 2026, 22 packages of 12 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the <em>Install</em> column names them.</p>
+<p>At the end of the project, on 30 September 2026, 29 packages of 14 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the <em>Install</em> column names them.</p>
 <section id="architecture">
-<h2>Architecture<a class="headerlink" href="#architecture" title="Link to this heading"></a></h2>
+<h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 30.0%" />
@@ -254,7 +255,7 @@
 </table>
 </section>
 <section id="cognitive-modules-and-structures">
-<h2>Cognitive modules and structures<a class="headerlink" href="#cognitive-modules-and-structures" title="Link to this heading"></a></h2>
+<h2>Cognitive modules and structures<a class="headerlink" href="#cognitive-modules-and-structures" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 30.0%" />
@@ -274,7 +275,7 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/risk-awareness-module">risk-awareness-module</a></p></td>
 <td><p>Risk awareness module (RiskAM): real-time risk score of visually navigated robots. See <a class="reference internal" href="../tutorials/docs/riskam.html#tutorial-riskam"><span class="std std-ref">Risk awareness with RiskAM</span></a>.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/physics-aware-module">physics-aware-module</a></p></td>
 <td><p>Physics-aware modelling module based on neuro-evolutionary symbolic regression.</p></td>
@@ -304,11 +305,15 @@
 <td><p>Explainability framework based on behaviour-tree status and component evidence.</p></td>
 <td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">explainability_msgs</span></code> and two explainers), source</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense-explainability">coresense-explainability</a></p></td>
+<td><p>Explainability framework templates: example component explainers and explainer selector, to start custom explainers.</p></td>
+<td><p>Pixi (the three example explainers), source</p></td>
+</tr>
 </tbody>
 </table>
 </section>
 <section id="toolchain">
-<h2>Toolchain<a class="headerlink" href="#toolchain" title="Link to this heading"></a></h2>
+<h2>Toolchain<a class="headerlink" href="#toolchain" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 30.0%" />
@@ -342,7 +347,7 @@
 </table>
 </section>
 <section id="ros-2-instrumentation">
-<h2>ROS 2 instrumentation<a class="headerlink" href="#ros-2-instrumentation" title="Link to this heading"></a></h2>
+<h2>ROS 2 instrumentation<a class="headerlink" href="#ros-2-instrumentation" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 30.0%" />
@@ -364,7 +369,7 @@
 </table>
 </section>
 <section id="testbeds">
-<h2>Testbeds<a class="headerlink" href="#testbeds" title="Link to this heading"></a></h2>
+<h2>Testbeds<a class="headerlink" href="#testbeds" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 30.0%" />

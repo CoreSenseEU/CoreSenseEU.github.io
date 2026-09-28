@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,15 +9,15 @@
   <title>Contribution guideline &mdash; CoreSense 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
 
   
     <link rel="shortcut icon" href="../_static/coresense_48x48.png"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8d563738"></script>
-      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=af2ce170"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -85,7 +85,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/riskam.html">Risk awareness with RiskAM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#install-with-pixi">Install with Pixi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build-from-source">Build from source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#run">Run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#output">Output</a></li>
 </ul>
@@ -184,7 +185,7 @@
            <div itemprop="articleBody">
              
   <section id="contribution-guideline">
-<span id="id1"></span><h1>Contribution guideline<a class="headerlink" href="#contribution-guideline" title="Link to this heading"></a></h1>
+<span id="id1"></span><h1>Contribution guideline<a class="headerlink" href="#contribution-guideline" title="Permalink to this heading"></a></h1>
 <p>The initial step to contribute a change or new code to a repository is to create a <strong>Fork</strong> of the repository. Forking is a process that duplicates the main repository, allowing the user to work on an independent copy without affecting the original codebase.
 Once the fork is created, it can be <strong>Cloned</strong> to the local development environment. Cloning the repository provides a local copy where the developer can implement the required modifications and test them in isolation.</p>
 <p>After the modifications are made and verified locally, they should be committed and <strong>Pushed</strong> to the corresponding fork on the remote repository platform (i.e., GitHub). At this stage, it is essential to maintain a clear commit history, as this will aid reviewers in understanding the changes made. The next step is to initiate a <strong>Pull Request (PR)</strong> from the fork. A pull request serves as a formal request to merge the changes from the user’s fork into the main repository, detailing the proposed modifications.</p>
@@ -193,7 +194,7 @@ Once the fork is created, it can be <strong>Cloned</strong> to the local develop
 <p>When implementing changes, adherence to the <a class="reference external" href="https://www.coresense.eu/doc/CS-019.pdf">CoreSense Developer’s Guidelines</a> is mandatory. Any code not aligning with these guidelines will be deemed non-compliant and will not be merged. Specifically, for contributions involving ROS code, compliance with ROS testing policies is required. This includes meeting the minimum requirement of unit test coverage, ensuring that all components are thoroughly tested to prevent regression and ensure robustness. Additionally, the code must pass all defined linter checks, which validate code quality, formatting, and adherence to stylistic conventions.</p>
 </section>
 <section id="releasing-a-package">
-<h1>Releasing a package<a class="headerlink" href="#releasing-a-package" title="Link to this heading"></a></h1>
+<h1>Releasing a package<a class="headerlink" href="#releasing-a-package" title="Permalink to this heading"></a></h1>
 <p>Packages are released as CoreSense packages when they reach the quality required by the development guidelines and are useful for the ROS community. The package leader requests the release, the committee of package leaders reviews it, and the package leader publishes it for the newest active ROS 2 distributions:</p>
 <ul class="simple">
 <li><p>In the ROS 2 buildfarm, with <code class="docutils literal notranslate"><span class="pre">bloom</span></code>, following the <a class="reference external" href="https://docs.ros.org/en/rolling/How-To-Guides/Releasing/Releasing-a-Package.html">ROS 2 release guide</a>.</p></li>

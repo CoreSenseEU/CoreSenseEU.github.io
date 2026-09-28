@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../../">
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,15 +9,15 @@
   <title>Risk awareness with RiskAM &mdash; CoreSense 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
 
   
     <link rel="shortcut icon" href="../../_static/coresense_48x48.png"/>
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=8d563738"></script>
-      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=af2ce170"></script>
+      <script src="../../_static/doctools.js?v=888ff710"></script>
+      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -85,7 +85,8 @@
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Risk awareness with RiskAM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-with-pixi">Install with Pixi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-from-source">Build from source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run">Run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#output">Output</a></li>
 </ul>
@@ -185,33 +186,47 @@
            <div itemprop="articleBody">
              
   <section id="risk-awareness-with-riskam">
-<span id="tutorial-riskam"></span><h1>Risk awareness with RiskAM<a class="headerlink" href="#risk-awareness-with-riskam" title="Link to this heading"></a></h1>
+<span id="tutorial-riskam"></span><h1>Risk awareness with RiskAM<a class="headerlink" href="#risk-awareness-with-riskam" title="Permalink to this heading"></a></h1>
 <p>The Risk Awareness Module (RiskAM), in <a class="reference external" href="https://github.com/CoreSenseEU/risk-awareness-module">risk-awareness-module</a>, computes in real time a risk score between 0 and 1 for visually navigated robots, considering the risk to humans around the robot. It combines proximity, gaze, position and approach sub-scores computed from an RGB-D camera.</p>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>An RGB camera and an absolute depth image in metres. The defaults are calibrated for Intel RealSense D4xx cameras.</p></li>
 <li><p>Optionally, the robot velocity (<code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code>) and person tracking, to enable the path-aware and approach sub-scores.</p></li>
-<li><p>ROS 2. It is tested on Rolling.</p></li>
+<li><p>ROS 2 Jazzy or Kilted.</p></li>
 </ul>
 </section>
-<section id="build">
-<h2>Build<a class="headerlink" href="#build" title="Link to this heading"></a></h2>
+<section id="install-with-pixi">
+<h2>Install with Pixi<a class="headerlink" href="#install-with-pixi" title="Permalink to this heading"></a></h2>
+<p>The four packages (<code class="docutils literal notranslate"><span class="pre">riskam</span></code>, <code class="docutils literal notranslate"><span class="pre">riskam_msgs</span></code>, <code class="docutils literal notranslate"><span class="pre">riskam_ros</span></code> and <code class="docutils literal notranslate"><span class="pre">riskam_bringup</span></code>) are in the CoreSense Pixi channels, so no ROS installation is needed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pixi<span class="w"> </span>init<span class="w"> </span>riskam_app<span class="w"> </span>-c<span class="w"> </span>https://prefix.dev/coresense-jazzy<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-c<span class="w"> </span>https://prefix.dev/robostack-jazzy<span class="w"> </span>-c<span class="w"> </span>conda-forge
+<span class="nb">cd</span><span class="w"> </span>riskam_app
+pixi<span class="w"> </span>add<span class="w"> </span>ros-jazzy-riskam-bringup<span class="w"> </span>ros-jazzy-ros2run<span class="w"> </span>ros-jazzy-ros2topic
+pixi<span class="w"> </span>shell
+</pre></div>
+</div>
+<p>For Kilted, replace <code class="docutils literal notranslate"><span class="pre">jazzy</span></code> with <code class="docutils literal notranslate"><span class="pre">kilted</span></code>. The packages pull in PyTorch and Ultralytics from conda-forge. In an installed copy, set <code class="docutils literal notranslate"><span class="pre">RISKAM_ML_MODELS_DIR</span></code> to a directory for the YOLO11n-Pose weights (<code class="docutils literal notranslate"><span class="pre">yolo11n-pose.pt</span></code>), which Ultralytics downloads there on first use if missing.</p>
+</section>
+<section id="build-from-source">
+<h2>Build from source<a class="headerlink" href="#build-from-source" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/CoreSenseEU/risk-awareness-module.git
 <span class="nb">cd</span><span class="w"> </span>..
+rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>-y
 colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<span class="w"> </span>riskam<span class="w"> </span>riskam_ros<span class="w"> </span>riskam_msgs<span class="w"> </span>riskam_bringup
 <span class="nb">source</span><span class="w"> </span>install/setup.bash
 </pre></div>
 </div>
+<p>The repository also includes the Pixi manifests: <code class="docutils literal notranslate"><span class="pre">pixi</span> <span class="pre">install</span></code> and <code class="docutils literal notranslate"><span class="pre">pixi</span> <span class="pre">run</span> <span class="pre">start</span></code> in the repository root build and launch the module.</p>
 </section>
 <section id="run">
-<h2>Run<a class="headerlink" href="#run" title="Link to this heading"></a></h2>
+<h2>Run<a class="headerlink" href="#run" title="Permalink to this heading"></a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>riskam_ros<span class="w"> </span>riskam_node.py<span class="w"> </span>--ros-args<span class="w"> </span>-p<span class="w"> </span>camera_topic:<span class="o">=</span>/your/color/topic
 </pre></div>
 </div>
-<p>or, to launch the node together with the data logger:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>riskam_bringup<span class="w"> </span>riskam.launch.py<span class="w"> </span>run_logger:<span class="o">=</span><span class="nb">true</span>
+<p>or, to launch the node together with the rosbag2 logger (<code class="docutils literal notranslate"><span class="pre">riskam_bagger</span></code>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>riskam_bringup<span class="w"> </span>riskam.launch.py<span class="w"> </span>run_bagger:<span class="o">=</span><span class="nb">true</span>
 </pre></div>
 </div>
 <p>The parameters are in <code class="docutils literal notranslate"><span class="pre">riskam_bringup/config/riskam_config.yml</span></code>. The main ones are:</p>
@@ -243,7 +258,7 @@ colcon<span class="w"> </span>build<span class="w"> </span>--packages-select<spa
 </table>
 </section>
 <section id="output">
-<h2>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h2>
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">/riskam/risk_score</span></code> (<code class="docutils literal notranslate"><span class="pre">riskam_msgs/FloatStamped</span></code>): risk of the scene, between 0 and 1.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">/riskam/annotated_image</span></code> (<code class="docutils literal notranslate"><span class="pre">sensor_msgs/Image</span></code>): visualisation overlay.</p></li>

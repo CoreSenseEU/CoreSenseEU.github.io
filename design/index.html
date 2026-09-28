@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -9,15 +9,15 @@
   <title>CoreSense design &mdash; CoreSense 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
-      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+      <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
 
   
     <link rel="shortcut icon" href="../_static/coresense_48x48.png"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=8d563738"></script>
-      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=af2ce170"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -85,7 +85,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/riskam.html">Risk awareness with RiskAM</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build">Build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#install-with-pixi">Install with Pixi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#build-from-source">Build from source</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#run">Run</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/riskam.html#output">Output</a></li>
 </ul>
@@ -184,10 +185,10 @@
            <div itemprop="articleBody">
              
   <section id="coresense-design">
-<span id="design"></span><h1>CoreSense design<a class="headerlink" href="#coresense-design" title="Link to this heading"></a></h1>
+<span id="design"></span><h1>CoreSense design<a class="headerlink" href="#coresense-design" title="Permalink to this heading"></a></h1>
 <p>CoreSense is a hybrid cognitive architecture that gives robots the capability of <em>understanding</em>, the world and themselves, and of <em>awareness</em>, understanding in synchrony with perception. The theory behind it is described in the public deliverables <a class="reference external" href="https://www.coresense.eu/doc/CS-050.pdf">D1.3 Theory of Understanding</a> and <a class="reference external" href="https://www.coresense.eu/doc/CS-060.pdf">D1.4 Theory of Awareness</a>. The terms used in the software follow the <a class="reference external" href="https://w3id.org/coresense/cso">CoreSense Ontology (CSO)</a>.</p>
 <section id="architecture-subsystems">
-<h2>Architecture subsystems<a class="headerlink" href="#architecture-subsystems" title="Link to this heading"></a></h2>
+<h2>Architecture subsystems<a class="headerlink" href="#architecture-subsystems" title="Permalink to this heading"></a></h2>
 <p>The architecture has three subsystems:</p>
 <ul class="simple">
 <li><p><strong>Runtime system</strong>: a modular software structure, based on ROS 2, used to deploy, monitor and control the modules of the robot. It uses the instrumentation of the ROS 2 platform (see <a class="reference internal" href="../instrumentation/index.html#instrumentation"><span class="std std-ref">CoreSense Instrumentation</span></a>).</p></li>
@@ -197,7 +198,7 @@
 <p>The architecture is specified in <a class="reference external" href="https://www.coresense.eu/doc/CS-059.pdf">D2.2 Specification of the CoreSense Architecture</a>, and its software assets are described in <a class="reference external" href="https://www.coresense.eu/doc/CS-098.pdf">D2.3 CoreSense Architecture</a>.</p>
 </section>
 <section id="cognitive-modules">
-<h2>Cognitive modules<a class="headerlink" href="#cognitive-modules" title="Link to this heading"></a></h2>
+<h2>Cognitive modules<a class="headerlink" href="#cognitive-modules" title="Permalink to this heading"></a></h2>
 <p>A cognitive module is a set of ROS 2 nodes that performs a cognitive function. In the ROS 2 implementation of the architecture, <a class="reference external" href="https://github.com/CoreSenseEU/cs4home_architecture">cs4home_architecture</a>, each module has five components, managed through ROS 2 lifecycle transitions:</p>
 <ul class="simple">
 <li><p><strong>Afferent</strong>: receives information from the system or the environment.</p></li>
@@ -214,11 +215,11 @@
 <p>A master/flow mechanism coordinates several cognitive modules. The tutorial <a class="reference internal" href="../tutorials/docs/cs4home_modules.html#tutorial-cs4home"><span class="std std-ref">Cognitive modules with cs4home_architecture</span></a> shows how to build and run example modules.</p>
 </section>
 <section id="understanding-system">
-<h2>Understanding system<a class="headerlink" href="#understanding-system" title="Link to this heading"></a></h2>
+<h2>Understanding system<a class="headerlink" href="#understanding-system" title="Permalink to this heading"></a></h2>
 <p>The understanding system, <a class="reference external" href="https://github.com/CoreSenseEU/coresense_understanding">coresense_understanding</a>, generates strategies to obtain models with given properties. It combines existing models with model-modification skills, the <em>engines</em>. Each engine is a ROS 2 node, annotated with its inputs and outputs, whose skill is wrapped in a behaviour tree. The logic of the understanding core is in <a class="reference external" href="https://github.com/CoreSenseEU/understanding-logic">understanding-logic</a>, and it uses the Vampire theorem prover through <a class="reference external" href="https://github.com/CoreSenseEU/coresense_vampire">coresense_vampire</a> and the knowledge base <a class="reference external" href="https://github.com/CoreSenseEU/triplestar_kb">triplestar_kb</a>.</p>
 </section>
 <section id="engineering-toolchain">
-<h2>Engineering toolchain<a class="headerlink" href="#engineering-toolchain" title="Link to this heading"></a></h2>
+<h2>Engineering toolchain<a class="headerlink" href="#engineering-toolchain" title="Permalink to this heading"></a></h2>
 <p>CoreSense systems can be designed with model-based tools. See <a class="reference internal" href="../toolchain/index.html#toolchain-introduction"><span class="std std-ref">CoreSense Toolchain</span></a>.</p>
 </section>
 </section>
