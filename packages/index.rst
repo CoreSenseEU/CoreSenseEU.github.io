@@ -5,7 +5,7 @@ Software catalogue
 
 All the CoreSense software is open source and hosted in the `CoreSense GitHub organisation <https://github.com/CoreSenseEU>`_. This page lists the main repositories, grouped by topic. The *Install* column shows how each one can be installed (see :ref:`build-instructions`): **Pixi**, **apt** or **source**.
 
-At the end of the project, on 30 September 2026, 22 packages of 12 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the *Install* column names them.
+At the end of the project, on 30 September 2026, 26 packages of 13 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the *Install* column names them.
 
 Architecture
 ************
@@ -69,7 +69,7 @@ Cognitive modules and structures
      - Pixi, apt
    * - `risk-awareness-module <https://github.com/CoreSenseEU/risk-awareness-module>`_
      - Risk awareness module (RiskAM): real-time risk score of visually navigated robots. See :ref:`tutorial_riskam`.
-     - source
+     - Pixi, source
    * - `physics-aware-module <https://github.com/CoreSenseEU/physics-aware-module>`_
      - Physics-aware modelling module based on neuro-evolutionary symbolic regression.
      - Pixi, source
