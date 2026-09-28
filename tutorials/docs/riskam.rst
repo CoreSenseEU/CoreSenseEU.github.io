@@ -10,18 +10,36 @@ Requirements
 
 - An RGB camera and an absolute depth image in metres. The defaults are calibrated for Intel RealSense D4xx cameras.
 - Optionally, the robot velocity (``cmd_vel``) and person tracking, to enable the path-aware and approach sub-scores.
-- ROS 2. It is tested on Rolling.
+- ROS 2 Jazzy or Kilted.
 
-Build
-=====
+Install with Pixi
+=================
+
+The four packages (``riskam``, ``riskam_msgs``, ``riskam_ros`` and ``riskam_bringup``) are in the CoreSense Pixi channels, so no ROS installation is needed:
+
+.. code-block:: bash
+
+   pixi init riskam_app -c https://prefix.dev/coresense-jazzy \
+     -c https://prefix.dev/robostack-jazzy -c conda-forge
+   cd riskam_app
+   pixi add ros-jazzy-riskam-bringup ros-jazzy-ros2run ros-jazzy-ros2topic
+   pixi shell
+
+For Kilted, replace ``jazzy`` with ``kilted``. The packages pull in PyTorch and Ultralytics from conda-forge. In an installed copy, set ``RISKAM_ML_MODELS_DIR`` to a directory for the YOLO11n-Pose weights (``yolo11n-pose.pt``), which Ultralytics downloads there on first use if missing.
+
+Build from source
+=================
 
 .. code-block:: bash
 
    cd ~/ros2_ws/src
    git clone https://github.com/CoreSenseEU/risk-awareness-module.git
    cd ..
+   rosdep install --from-paths src --ignore-src -y
    colcon build --packages-select riskam riskam_ros riskam_msgs riskam_bringup
    source install/setup.bash
+
+The repository also includes the Pixi manifests: ``pixi install`` and ``pixi run start`` in the repository root build and launch the module.
 
 Run
 ===
@@ -30,11 +48,11 @@ Run
 
    ros2 run riskam_ros riskam_node.py --ros-args -p camera_topic:=/your/color/topic
 
-or, to launch the node together with the data logger:
+or, to launch the node together with the rosbag2 logger (``riskam_bagger``):
 
 .. code-block:: bash
 
-   ros2 launch riskam_bringup riskam.launch.py run_logger:=true
+   ros2 launch riskam_bringup riskam.launch.py run_bagger:=true
 
 The parameters are in ``riskam_bringup/config/riskam_config.yml``. The main ones are:
 
