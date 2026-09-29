@@ -101,6 +101,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/pixi_release.html#install-the-published-package">7. Install the published package</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html">Drone inspection missions in simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html#configure-the-world">Configure the world</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html#create-a-mission-with-the-tui">Create a mission with the TUI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html#launch-the-simulation">Launch the simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html#run-the-mission">Run the mission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html#view-panels-in-rviz">View panels in RViz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html#stop-the-simulation">Stop the simulation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../instrumentation/index.html">CoreSense Instrumentation</a><ul>
@@ -130,17 +140,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../toolchain/index.html">CoreSense Toolchain</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testbeds/index.html">Testbeds</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../testbeds/docs/manufacturing_testbed.html">TB1: Manufacturing Testbed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html">TB2: Inspection Testbed</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#setup">Setup</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#aerostack2-installation">Aerostack2 Installation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#as2-project-requirements">AS2 project requirements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#inspection-testbed-project">Inspection Testbed project</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#simulation-environment">Simulation Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html#execution">Execution</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../testbeds/docs/inspection_testbed.html">TB2: Inspection Testbed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../testbeds/docs/social_testbed.html">TB3: Social Testbed</a></li>
 </ul>
 </li>
@@ -188,7 +188,7 @@
 <span id="id1"></span><h1>Demos<a class="headerlink" href="#demos" title="Permalink to this heading"></a></h1>
 <p>Demos that can be run without the real robots:</p>
 <ul class="simple">
-<li><p><strong>Drone inspection in simulation</strong>: the simulation environment of the inspection testbed, with Aerostack2. See <a class="reference internal" href="../testbeds/docs/inspection_testbed.html#inspection-testbeds"><span class="std std-ref">TB2: Inspection Testbed</span></a> and <a class="reference external" href="https://github.com/CoreSenseEU/TB2_Panel_Inspection_Simulation">TB2_Panel_Inspection_Simulation</a>.</p></li>
+<li><p><strong>Drone inspection in simulation</strong>: multi-drone photovoltaic panel inspection using the Aerostack2 multirotor simulator (<code class="docutils literal notranslate"><span class="pre">as2_platform_multirotor_simulator</span></code>), with auction-based task allocation and RViz visualisation. See <a class="reference internal" href="../testbeds/docs/inspection_testbed.html#inspection-testbeds"><span class="std std-ref">TB2: Inspection Testbed</span></a>, <a class="reference internal" href="../tutorials/docs/tb2_simulation_missions.html#tutorial-tb2-simulation"><span class="std std-ref">Drone inspection missions in simulation</span></a> and <a class="reference external" href="https://github.com/CoreSenseEU/tb2_project">tb2_project</a>.</p></li>
 <li><p><strong>Interactive assistant in simulation</strong>: a reduced version of the PAL interactive robot demo, with face detection, a chat interface and simulated objects. See <a class="reference external" href="https://github.com/CoreSenseEU/pal_assistant_demo">pal_assistant_demo</a>.</p></li>
 <li><p><strong>ROS 2 instrumentation</strong>: video of the virtual drivers and the RViz plugin in <a class="reference internal" href="../instrumentation/index.html#instrumentation"><span class="std std-ref">CoreSense Instrumentation</span></a>.</p></li>
 <li><p><strong>Navigation</strong>: EasyNav demos with simulated robots, in <a class="reference external" href="https://easynavigation.github.io">https://easynavigation.github.io</a>.</p></li>
