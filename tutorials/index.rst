@@ -11,6 +11,7 @@ Step-by-step guides to use and extend CoreSense.
    docs/cs4home_modules.rst
    docs/riskam.rst
    docs/pixi_release.rst
+   docs/tb2_simulation_missions.rst
 
 More guides:
 

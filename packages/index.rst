@@ -47,6 +47,9 @@ Architecture
    * - `triplestar_kb <https://github.com/CoreSenseEU/triplestar_kb>`_
      - Knowledge base for ROS 2 based on RDF-star and RDF 1.2.
      - source
+   * - `knowledge_core <https://github.com/CoreSenseEU/knowledge_core>`_
+     - RDFlib-backed minimalistic knowledge base with ROS 2 API, OWL2 reasoning and event subscriptions. Used as the per-drone KB in the inspection testbed.
+     - source
    * - `coresense_vampire <https://github.com/CoreSenseEU/coresense_vampire>`_
      - ROS 2 node that wraps the Vampire automated theorem prover.
      - Pixi, source
@@ -142,6 +145,9 @@ Testbeds
    * - Repository
      - Description
      - Install
+   * - `aerostack2 <https://github.com/aerostack2/aerostack2>`_
+     - ROS 2 framework for autonomous aerial systems, used as the runtime platform in the inspection testbed. See `Aerostack2 documentation <https://aerostack2.github.io>`_.
+     - apt, source
    * - `CoreSense4Home <https://github.com/CoreSenseEU/CoreSense4Home>`_
      - CoreSense implementation for RoboCup@Home (social testbed).
      - source
@@ -154,6 +160,6 @@ Testbeds
    * - `collective_awareness_structure <https://github.com/CoreSenseEU/collective_awareness_structure>`_
      - Collective awareness for multi-robot systems built with Aerostack2 (inspection testbed).
      - Pixi, source
-   * - `TB2_Panel_Inspection_Simulation <https://github.com/CoreSenseEU/TB2_Panel_Inspection_Simulation>`_
+   * - `tb2_project <https://github.com/CoreSenseEU/tb2_project>`_
      - Simulation of the drone panel inspection testbed.
      - source
