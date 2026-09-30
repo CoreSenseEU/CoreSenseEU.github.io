@@ -187,7 +187,7 @@
   <section id="software-catalogue">
 <span id="packages"></span><h1>Software catalogue<a class="headerlink" href="#software-catalogue" title="Permalink to this heading"></a></h1>
 <p>All the CoreSense software is open source and hosted in the <a class="reference external" href="https://github.com/CoreSenseEU">CoreSense GitHub organisation</a>. This page lists the main repositories, grouped by topic. The <em>Install</em> column shows how each one can be installed (see <a class="reference internal" href="../build_instructions/index.html#build-instructions"><span class="std std-ref">Build and Install</span></a>): <strong>Pixi</strong>, <strong>apt</strong> or <strong>source</strong>.</p>
-<p>At the end of the project, on 30 September 2026, 34 packages of 15 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the <em>Install</em> column names them.</p>
+<p>At the end of the project, on 30 September 2026, 44 packages of 17 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted, together with the dependencies that were not available in RoboStack (<code class="docutils literal notranslate"><span class="pre">behaviortree_ros2</span></code>, <code class="docutils literal notranslate"><span class="pre">nlohmann_json_schema_validator_vendor</span></code>, <code class="docutils literal notranslate"><span class="pre">launch_pal</span></code> and <code class="docutils literal notranslate"><span class="pre">llama_msgs</span></code>). When only some packages of a repository are in the channels, the <em>Install</em> column names them.</p>
 <section id="architecture">
 <h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default">
@@ -217,7 +217,7 @@
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense_understanding">coresense_understanding</a></p></td>
 <td><p>Understanding system: generates strategies to obtain models with given properties.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/understanding-logic">understanding-logic</a></p></td>
 <td><p>Logic of the understanding core.</p></td>
@@ -229,15 +229,15 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/decision_system">decision_system</a></p></td>
 <td><p>CoreSense decision system for ROS 2.</p></td>
-<td><p>Pixi (all but <code class="docutils literal notranslate"><span class="pre">krr_btcpp_ros2</span></code>), source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense_common">coresense_common</a></p></td>
 <td><p>Common messages, bringup and behaviour-tree controller of the understanding system.</p></td>
-<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">coresense_msgs</span></code>), source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense_engine_examples">coresense_engine_examples</a></p></td>
 <td><p>Examples of CoreSense engine nodes.</p></td>
-<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">coresense_example_msgs</span></code>), source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/triplestar_kb">triplestar_kb</a></p></td>
 <td><p>Knowledge base for ROS 2 based on RDF-star and RDF 1.2.</p></td>
@@ -307,7 +307,7 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/cs4home-explainability">cs4home-explainability</a></p></td>
 <td><p>Explainability framework based on behaviour-tree status and component evidence.</p></td>
-<td><p>Pixi (<code class="docutils literal notranslate"><span class="pre">explainability_msgs</span></code> and two explainers), source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense-explainability">coresense-explainability</a></p></td>
 <td><p>Explainability framework templates: example component explainers and explainer selector, to start custom explainers.</p></td>
