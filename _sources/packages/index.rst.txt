@@ -5,7 +5,7 @@ Software catalogue
 
 All the CoreSense software is open source and hosted in the `CoreSense GitHub organisation <https://github.com/CoreSenseEU>`_. This page lists the main repositories, grouped by topic. The *Install* column shows how each one can be installed (see :ref:`build-instructions`): **Pixi**, **apt** or **source**.
 
-At the end of the project, on 30 September 2026, 79 packages of 19 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted, together with the dependencies that were not available in RoboStack (``behaviortree_ros2``, ``nlohmann_json_schema_validator_vendor``, ``launch_pal``, ``llama_msgs`` and ``kb_msgs``). When only some packages of a repository are in the channels, the *Install* column names them.
+At the end of the project, on 30 September 2026, 80 packages of 20 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted, together with the dependencies that were not available in RoboStack (``behaviortree_ros2``, ``nlohmann_json_schema_validator_vendor``, ``launch_pal``, ``llama_msgs`` and ``kb_msgs``, the latter from a `CoreSense fork <https://github.com/CoreSenseEU/kb_msgs>`__ that builds on Jazzy and Kilted). When only some packages of a repository are in the channels, the *Install* column names them.
 
 Architecture
 ************
