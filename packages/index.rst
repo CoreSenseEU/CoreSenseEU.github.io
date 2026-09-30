@@ -5,7 +5,7 @@ Software catalogue
 
 All the CoreSense software is open source and hosted in the `CoreSense GitHub organisation <https://github.com/CoreSenseEU>`_. This page lists the main repositories, grouped by topic. The *Install* column shows how each one can be installed (see :ref:`build-instructions`): **Pixi**, **apt** or **source**.
 
-At the end of the project, on 30 September 2026, 34 packages of 15 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the *Install* column names them.
+At the end of the project, on 30 September 2026, 44 packages of 17 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted, together with the dependencies that were not available in RoboStack (``behaviortree_ros2``, ``nlohmann_json_schema_validator_vendor``, ``launch_pal`` and ``llama_msgs``). When only some packages of a repository are in the channels, the *Install* column names them.
 
 Architecture
 ************
@@ -28,7 +28,7 @@ Architecture
      - source
    * - `coresense_understanding <https://github.com/CoreSenseEU/coresense_understanding>`_
      - Understanding system: generates strategies to obtain models with given properties.
-     - source
+     - Pixi, source
    * - `understanding-logic <https://github.com/CoreSenseEU/understanding-logic>`_
      - Logic of the understanding core.
      - source
@@ -37,13 +37,13 @@ Architecture
      - source
    * - `decision_system <https://github.com/CoreSenseEU/decision_system>`_
      - CoreSense decision system for ROS 2.
-     - Pixi (all but ``krr_btcpp_ros2``), source
+     - Pixi, source
    * - `coresense_common <https://github.com/CoreSenseEU/coresense_common>`_
      - Common messages, bringup and behaviour-tree controller of the understanding system.
-     - Pixi (``coresense_msgs``), source
+     - Pixi, source
    * - `coresense_engine_examples <https://github.com/CoreSenseEU/coresense_engine_examples>`_
      - Examples of CoreSense engine nodes.
-     - Pixi (``coresense_example_msgs``), source
+     - Pixi, source
    * - `triplestar_kb <https://github.com/CoreSenseEU/triplestar_kb>`_
      - Knowledge base for ROS 2 based on RDF-star and RDF 1.2.
      - Pixi, source
@@ -93,7 +93,7 @@ Cognitive modules and structures
      - source
    * - `cs4home-explainability <https://github.com/CoreSenseEU/cs4home-explainability>`_
      - Explainability framework based on behaviour-tree status and component evidence.
-     - Pixi (``explainability_msgs`` and two explainers), source
+     - Pixi, source
    * - `coresense-explainability <https://github.com/CoreSenseEU/coresense-explainability>`_
      - Explainability framework templates: example component explainers and explainer selector, to start custom explainers.
      - Pixi (the three example explainers), source
