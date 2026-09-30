@@ -187,7 +187,7 @@
   <section id="software-catalogue">
 <span id="packages"></span><h1>Software catalogue<a class="headerlink" href="#software-catalogue" title="Permalink to this heading"></a></h1>
 <p>All the CoreSense software is open source and hosted in the <a class="reference external" href="https://github.com/CoreSenseEU">CoreSense GitHub organisation</a>. This page lists the main repositories, grouped by topic. The <em>Install</em> column shows how each one can be installed (see <a class="reference internal" href="../build_instructions/index.html#build-instructions"><span class="std std-ref">Build and Install</span></a>): <strong>Pixi</strong>, <strong>apt</strong> or <strong>source</strong>.</p>
-<p>At the end of the project, on 30 September 2026, 44 packages of 17 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted, together with the dependencies that were not available in RoboStack (<code class="docutils literal notranslate"><span class="pre">behaviortree_ros2</span></code>, <code class="docutils literal notranslate"><span class="pre">nlohmann_json_schema_validator_vendor</span></code>, <code class="docutils literal notranslate"><span class="pre">launch_pal</span></code> and <code class="docutils literal notranslate"><span class="pre">llama_msgs</span></code>). When only some packages of a repository are in the channels, the <em>Install</em> column names them.</p>
+<p>At the end of the project, on 30 September 2026, 79 packages of 19 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted, together with the dependencies that were not available in RoboStack (<code class="docutils literal notranslate"><span class="pre">behaviortree_ros2</span></code>, <code class="docutils literal notranslate"><span class="pre">nlohmann_json_schema_validator_vendor</span></code>, <code class="docutils literal notranslate"><span class="pre">launch_pal</span></code>, <code class="docutils literal notranslate"><span class="pre">llama_msgs</span></code> and <code class="docutils literal notranslate"><span class="pre">kb_msgs</span></code>). When only some packages of a repository are in the channels, the <em>Install</em> column names them.</p>
 <section id="architecture">
 <h2>Architecture<a class="headerlink" href="#architecture" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default">
@@ -245,7 +245,7 @@
 </tr>
 <tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/knowledge_core">knowledge_core</a></p></td>
 <td><p>RDFlib-backed minimalistic knowledge base with ROS 2 API, OWL2 reasoning and event subscriptions. Used as the per-drone KB in the inspection testbed.</p></td>
-<td><p>source</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/coresense_vampire">coresense_vampire</a></p></td>
 <td><p>ROS 2 node that wraps the Vampire automated theorem prover.</p></td>
@@ -387,9 +387,9 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="https://github.com/aerostack2/aerostack2">aerostack2</a></p></td>
-<td><p>ROS 2 framework for autonomous aerial systems, used as the runtime platform in the inspection testbed. See <a class="reference external" href="https://aerostack2.github.io">Aerostack2 documentation</a>.</p></td>
-<td><p>apt, source</p></td>
+<tr class="row-even"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/aerostack2">aerostack2</a></p></td>
+<td><p>CoreSense fork of <a class="reference external" href="https://github.com/aerostack2/aerostack2">Aerostack2</a>, the ROS 2 framework for autonomous aerial systems used as the runtime platform in the inspection testbed, with the CoreSense behaviours (auction-based task allocation, collision avoidance, collective awareness). See <a class="reference external" href="https://aerostack2.github.io">Aerostack2 documentation</a>.</p></td>
+<td><p>Pixi, source</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference external" href="https://github.com/CoreSenseEU/CoreSense4Home">CoreSense4Home</a></p></td>
 <td><p>CoreSense implementation for <a class="reference external" href="mailto:RoboCup&#37;&#52;&#48;Home">RoboCup<span>&#64;</span>Home</a> (social testbed).</p></td>

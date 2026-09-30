@@ -5,7 +5,7 @@ Software catalogue
 
 All the CoreSense software is open source and hosted in the `CoreSense GitHub organisation <https://github.com/CoreSenseEU>`_. This page lists the main repositories, grouped by topic. The *Install* column shows how each one can be installed (see :ref:`build-instructions`): **Pixi**, **apt** or **source**.
 
-At the end of the project, on 30 September 2026, 44 packages of 17 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted, together with the dependencies that were not available in RoboStack (``behaviortree_ros2``, ``nlohmann_json_schema_validator_vendor``, ``launch_pal`` and ``llama_msgs``). When only some packages of a repository are in the channels, the *Install* column names them.
+At the end of the project, on 30 September 2026, 79 packages of 19 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted, together with the dependencies that were not available in RoboStack (``behaviortree_ros2``, ``nlohmann_json_schema_validator_vendor``, ``launch_pal``, ``llama_msgs`` and ``kb_msgs``). When only some packages of a repository are in the channels, the *Install* column names them.
 
 Architecture
 ************
@@ -49,7 +49,7 @@ Architecture
      - Pixi, source
    * - `knowledge_core <https://github.com/CoreSenseEU/knowledge_core>`_
      - RDFlib-backed minimalistic knowledge base with ROS 2 API, OWL2 reasoning and event subscriptions. Used as the per-drone KB in the inspection testbed.
-     - source
+     - Pixi, source
    * - `coresense_vampire <https://github.com/CoreSenseEU/coresense_vampire>`_
      - ROS 2 node that wraps the Vampire automated theorem prover.
      - Pixi, source
@@ -145,9 +145,9 @@ Testbeds
    * - Repository
      - Description
      - Install
-   * - `aerostack2 <https://github.com/aerostack2/aerostack2>`_
-     - ROS 2 framework for autonomous aerial systems, used as the runtime platform in the inspection testbed. See `Aerostack2 documentation <https://aerostack2.github.io>`_.
-     - apt, source
+   * - `aerostack2 <https://github.com/CoreSenseEU/aerostack2>`_
+     - CoreSense fork of `Aerostack2 <https://github.com/aerostack2/aerostack2>`__, the ROS 2 framework for autonomous aerial systems used as the runtime platform in the inspection testbed, with the CoreSense behaviours (auction-based task allocation, collision avoidance, collective awareness). See `Aerostack2 documentation <https://aerostack2.github.io>`_.
+     - Pixi, source
    * - `CoreSense4Home <https://github.com/CoreSenseEU/CoreSense4Home>`_
      - CoreSense implementation for RoboCup@Home (social testbed).
      - source
