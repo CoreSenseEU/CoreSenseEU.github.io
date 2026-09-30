@@ -5,7 +5,7 @@ Software catalogue
 
 All the CoreSense software is open source and hosted in the `CoreSense GitHub organisation <https://github.com/CoreSenseEU>`_. This page lists the main repositories, grouped by topic. The *Install* column shows how each one can be installed (see :ref:`build-instructions`): **Pixi**, **apt** or **source**.
 
-At the end of the project, on 30 September 2026, 29 packages of 14 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the *Install* column names them.
+At the end of the project, on 30 September 2026, 34 packages of 15 repositories were added to the CoreSense Pixi channels, for ROS 2 Jazzy and Kilted. When only some packages of a repository are in the channels, the *Install* column names them.
 
 Architecture
 ************
@@ -46,7 +46,7 @@ Architecture
      - Pixi (``coresense_example_msgs``), source
    * - `triplestar_kb <https://github.com/CoreSenseEU/triplestar_kb>`_
      - Knowledge base for ROS 2 based on RDF-star and RDF 1.2.
-     - source
+     - Pixi, source
    * - `knowledge_core <https://github.com/CoreSenseEU/knowledge_core>`_
      - RDFlib-backed minimalistic knowledge base with ROS 2 API, OWL2 reasoning and event subscriptions. Used as the per-drone KB in the inspection testbed.
      - source
